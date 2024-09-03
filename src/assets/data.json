@@ -1,0 +1,91 @@
+{
+    "nav" : [
+        {
+            "title" : "Accueil"
+        },
+        {
+            "title" : "Club",
+            "subTitles" : [
+                {
+                    "title" : "historique"
+                },
+                {
+                    "title" : "Équipe dirigeante",
+                    "subTitles" : [
+                        {
+                            "title" : "Commission sportive"
+                        },
+                        {
+                            "title" : "Commission Arbitrage"
+                        },
+                        {
+                            "title" : "Commission Communication"
+                        },
+                        {
+                            "title" : "Commission Animation"
+                        },
+                        {
+                            "title" : "Commission Équipement"
+                        },
+                        {
+                            "title" : "Commission Partenaire"
+                        },
+                        {
+                            "title" : "Commission Ethique"
+                        }
+                    ]
+                },
+                {
+                    "title" : "S'inscrire"
+                },
+                {
+                    "title" : "Où nous trouver ?"
+                },
+                {
+                    "title" : "Liens utiles"
+                }
+            ] 
+        },
+        {
+            "title" : "Équipes",
+            "subTitles" : [
+                {
+                    "title" : "Soirée repas"
+                },
+                {
+                    "title" : "Foire de la Saint André"
+                },
+                {
+                    "title" : "Marché de noël"
+                },
+                {
+                    "title" : "Tournoi de la Parmel'Hand"
+                },
+                {
+                    "title" : "Stages Vac'Hand et Prépa'Hand"
+                }
+            ]
+        },
+        {
+            "title" : "Matchs et résultats"
+        },
+        {
+            "title" : "Évènements"
+        },
+        {
+            "title" : "Boutique"
+        },
+        {
+            "title" : "Partenaire"
+        },
+        {
+            "title" : "Galerie"
+        },
+        {
+            "title" : "Actualités"
+        },
+        {
+            "title" : "Contact"
+        }
+    ]
+}
