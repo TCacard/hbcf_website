@@ -1,0 +1,16 @@
+.club-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.text {
+    color: #6B5678;
+}
+
+.title {
+    text-shadow: 4px 4px 4px #6B5678;
+    font-size: 36px; /* Taille du titre augmentée */
+}

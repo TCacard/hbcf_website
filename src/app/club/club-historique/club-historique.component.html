@@ -1,0 +1,12 @@
+<div class="club-content text">
+    <h1 class="title">{{ history.title }}</h1>
+    <div *ngFor="let text of history.content.content">
+        <p>{{ text }}</p>
+    </div>
+
+    <div *ngFor="let img of history.content.image">
+        <img  [src]="img.link" [alt]="img.alt">
+        <p>{{ img.alt }}</p>
+    </div>
+    <app-citation [citation]="history.content.citation"></app-citation>
+</div>

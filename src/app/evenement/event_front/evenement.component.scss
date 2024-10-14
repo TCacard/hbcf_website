@@ -1,0 +1,75 @@
+.event_content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.text {
+    color: #6B5678;
+}
+
+.title {
+    text-shadow: 4px 4px 4px #6B5678;
+    font-size: 36px; /* Taille du titre augmentée */
+}
+
+.event-content {
+    display: flex;
+    width: 90%;
+    margin-bottom: 20px; /* Espace entre les événements */
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Ajout d'ombre */
+    border-radius: 10px;
+    max-height: 10%;
+}
+
+.image_event {
+    width: auto;
+    height: 100%;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+::ng-deep .mat-typography p {
+    font-size: 1.5em;
+    margin: 0 !important;
+    font-weight: bold;
+    font-family: 'Alegreya Sans' !important;
+}
+
+
+.event-name {
+    display: flex;
+    width: 100%;
+    background-color: #AD8EC1;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    color: #6B5678;
+}
+
+/* Styles pour alterner la disposition */
+.reverse-layout {
+    flex-direction: row-reverse; /* Inverser l'ordre pour les éléments impairs */
+}
+
+.reverse-layout .image_event {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.reverse-layout .event-name {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+

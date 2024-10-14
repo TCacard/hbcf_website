@@ -1,0 +1,10 @@
+
+<div class="event_content">
+    <h1 class="text title">Évènements</h1>
+    <div *ngFor="let event of events, let i = index" class="event-content" [ngClass]="{'reverse-layout': i % 2 !== 0}" [routerLink]="['/evenements', event.id]" >
+        <img [src]="event.picture" alt="image_equipe_match" class="image_event">
+        <div class="event-name">
+            <p>{{ event.name }}</p>
+        </div>
+    </div>      
+</div>

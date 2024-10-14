@@ -1,0 +1,12 @@
+<div class="event_content">
+    <h1 class="text title">{{event.name}}</h1>
+    <p class="upper">{{ event.details.catchphrase }}</p>    
+    <img [src]="event.picture" [alt]="event.name">
+    <h2 class="upper">{{ event.details.content.title }}</h2>
+    <div class="div-content">
+        <p *ngFor="let ev of event.details.content.content">{{ ev }}</p>
+    </div>
+    <img *ngFor="let img of event.details.content.images" [src]="img.link" [alt]="img.alt" class="soiree_hp">
+    <app-citation *ngIf="event.details.content.citation" [citation]="event.details.content.citation"></app-citation>
+
+</div>

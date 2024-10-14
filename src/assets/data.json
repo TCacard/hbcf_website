@@ -1,91 +1,406 @@
 {
     "nav" : [
         {
-            "title" : "Accueil"
+            "title" : "Accueil",
+            "route" : "/accueil"
         },
         {
             "title" : "Club",
             "subTitles" : [
                 {
-                    "title" : "historique"
+                    "title" : "historique",
+                    "route" : "/club/history"
                 },
                 {
-                    "title" : "Équipe dirigeante",
-                    "subTitles" : [
-                        {
-                            "title" : "Commission sportive"
-                        },
-                        {
-                            "title" : "Commission Arbitrage"
-                        },
-                        {
-                            "title" : "Commission Communication"
-                        },
-                        {
-                            "title" : "Commission Animation"
-                        },
-                        {
-                            "title" : "Commission Équipement"
-                        },
-                        {
-                            "title" : "Commission Partenaire"
-                        },
-                        {
-                            "title" : "Commission Ethique"
-                        }
-                    ]
+                    "title" : "Où nous trouver ?",
+                    "route": "/club/location"
                 },
                 {
-                    "title" : "S'inscrire"
-                },
-                {
-                    "title" : "Où nous trouver ?"
-                },
-                {
-                    "title" : "Liens utiles"
+                    "title" : "En quelques chiffres",
+                    "route": "/club/numbers"
                 }
             ] 
         },
         {
             "title" : "Équipes",
+            "route": "/equipes"
+        },
+        {
+            "title" : "Évènements",
+            "route" : "/evenements"
+        },
+        {
+            "title" : "Partenaire",
             "subTitles" : [
                 {
-                    "title" : "Soirée repas"
+                    "title" : "Nos partenaires"
                 },
                 {
-                    "title" : "Foire de la Saint André"
-                },
-                {
-                    "title" : "Marché de noël"
-                },
-                {
-                    "title" : "Tournoi de la Parmel'Hand"
-                },
-                {
-                    "title" : "Stages Vac'Hand et Prépa'Hand"
+                    "title" : "Devenir un partenaire"
                 }
             ]
         },
         {
-            "title" : "Matchs et résultats"
+            "title" : "Galerie",
+            "route" : "/galerie"
         },
         {
-            "title" : "Évènements"
+            "title" : "Actualités",
+            "route" : "/actus"
         },
         {
-            "title" : "Boutique"
+            "title" : "Contact",
+            "route" : "/contact"
         },
         {
-            "title" : "Partenaire"
+            "title" : "S'inscrire",
+            "route" : "inscriptions"
         },
         {
-            "title" : "Galerie"
-        },
-        {
-            "title" : "Actualités"
-        },
-        {
-            "title" : "Contact"
+            "title" : "Boutique",
+            "route": "https://www.teamsport2000.com/1395-hbc-filliere"
         }
-    ]
+    ],
+    "equipes": {
+        "equipes_competition": [
+            {
+                "id": 1,
+                "name": "Sénior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp",
+                "civilite": "Joueuses",
+                "details": {
+                    "annees": "2006 et avant",
+                    "niveau" : [
+                        {
+                            "equipe": "SF1",
+                            "niveau": "Nationale 3"
+                        },
+                        {
+                            "equipe": "SF2",
+                            "niveau": "1ère division AURA"
+                        }
+                    ],
+                    "entrainements": [
+                        {
+                            "jour": "Mercredi",
+                            "horaire": "20h30-22h",
+                            "equipe": "SF1"
+                        },
+                        {
+                            "jour": "Jeudi",
+                            "horaire": "19h00-20h30",
+                            "equipe": "SF2"
+                        },
+                        {
+                            "jour": "Vendredi",
+                            "horaire": "20h30-22h",
+                            "equipe": "SF1-SF2"
+                        }
+                    ],
+                    "entraineurs": [
+                        {
+                            "name": "Boucherba",
+                            "surname": "Mailys",
+                            "team": "Entraineur Nationale 3",
+                            "phone": "07.67.73.18.54",
+                            "picture" : "../../../assets/images/entraineurs/may_boucher.png"
+                        },
+                        {
+                            "name": "Antonelli",
+                            "surname": "Jean-Marc",
+                            "team": "Entraineur Nationale 3",
+                            "phone": "06.85.72.39.84",
+                            "picture" : "../../../assets/images/entraineurs/jm_anto.png"
+                        },
+                        {
+                            "name": "Berchiatti",
+                            "surname": "Clément",
+                            "team": "Entraineur Division Aura",
+                            "phone": "07.67.73.18.54",
+                            "picture" : "../../../assets/images/entraineurs/clem_berch.png"
+                        }
+                    ],
+                    "players" : [
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 2,
+                "name": "Senior garçons",
+                "image": "../../assets/images/equipes/sg.png",
+                "civilite": "Joueurs",
+                "details": {
+                    "annee": "2006 et avant",
+                    "niveau" : [
+                        {
+                            "equipe": "SG1",
+                            "niveau": "1ère division AURA"
+                        }
+                    ],
+                    "entrainements": [
+                        {
+                            "jour": "Mardi",
+                            "horaire": "20h30-22h",
+                            "equipe": "SG1"
+                        },
+                        {
+                            "jour": "Jeudi",
+                            "horaire": "20h30-22h",
+                            "equipe": "SG1"
+                        }
+                    ],
+                    "entraineurs": [
+                        {
+                            "name": "Brasseur",
+                            "surname": "Corentin",
+                            "team": "Entraineur 1ère division AURA",
+                            "phone": "**.**.**.**.**",
+                            "picture" : "../../../assets/images/entraineurs/jm_anto.png"
+                        },
+                        {
+                            "name": "Cacard",
+                            "surname": "Damien",
+                            "team": "Entraineur Gardiens",
+                            "phone": "**.**.**.**.**",
+                            "picture" : "../../../assets/images/entraineurs/jm_anto.png"
+                        }
+                    ],
+                    "players" : [
+                        {
+                            "name":"Sarciat",
+                            "surname": "Antoine",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Cacard",
+                            "surname": "Théo",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 3,
+                "name": "senior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 4,
+                "name": "senior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 5,
+                "name": "senior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 6,
+                "name": "senior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 7,
+                "name": "senior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            }
+        ],
+        "equipe_dirigeante": [
+            {
+                "id": 8,
+                "name": "Commission Sportive",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 9,
+                "name": "Commission Arbitrage",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 10,
+                "name": "Commission Communication",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 11,
+                "name": "Commission Animation",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 12,
+                "name": "Commission Equipement",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 13,
+                "name": "Commission Partenaires",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 14,
+                "name": "Commission Ethique",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            }
+        ]
+    },
+    "events": [
+        {
+            "id": 1,
+            "name": "Soirée du Club",
+            "picture": "../../../assets/images/events/soiree_club.jpg",
+            "details": {
+                "catchphrase": "Un thème chaque année, un repas assorti, des bénévoles pour vous servir et une soirée dansante...",
+                "content": {
+                    "title": "C'est notre traditionnelle soirée repas",
+                    "content": [
+                        "Tartiflette lors de la soirée Tartiflette lors de la soirée « Les Bronzés font du ski », Choucroute lors de la soirée alsacienne… Quel sera notre prochain thème ?",
+                        "À vous de le découvrir en participant à notre prochaine soirée repas du HBC Fillière !",
+                        "Service assuré par les licenciés de plus de 16 ans supervisés par les séniors, un DJ pour assurer la deuxième partie de la soirée… Et chaque année de nombreux lots à gagner lors de notre tombola !",
+                        "Suivez nous sur les réseaux afin de ne pas rater la date… et cochez la sur votre agenda dès qu’elle sera révélée !"
+                    ],
+                    "images": [
+                        {
+                            "link": "../../../assets/images/events/banniere-soiree-du-hand.webp",
+                            "alt" : "soiree_hp"
+                        }
+                    ],
+                    "citation": {
+                        "text": "Nulle table ne peut remplacer le partage d’un repas simple orné d’une touche d’amour et d’amitié.",
+                        "auteur": "Martine Chaudey"
+                    }
+                    
+                }
+            }
+        },
+        {
+            "id": 2,
+            "name": "Foire de la saint André",
+            "picture": "../../../assets/images/events/hbcf-saint-andre.png",
+            "details": {
+                "catchphrase": "Un thème chaque année, un repas assorti, des bénévoles pour vous servir et une soirée dansante...",
+                "content": {
+                    "title": "C'est notre traditionnelle soirée repas",
+                    "content": [
+                        "Tartiflette lors de la soirée Tartiflette lors de la soirée « Les Bronzés font du ski », Choucroute lors de la soirée alsacienne… Quel sera notre prochain thème ?",
+                        "À vous de le découvrir en participant à notre prochaine soirée repas du HBC Fillière !",
+                        "Service assuré par les licenciés de plus de 16 ans supervisés par les séniors, un DJ pour assurer la deuxième partie de la soirée… Et chaque année de nombreux lots à gagner lors de notre tombola !",
+                        "Suivez nous sur les réseaux afin de ne pas rater la date… et cochez la sur votre agenda dès qu’elle sera révélée !"
+                    ],
+                    "images": [
+                        {
+                            "link": "../../../assets/images/events/banniere-soiree-du-hand.webp",
+                            "alt" : "soiree_hp"
+                        }
+                    ],
+                    "citation": {
+                        "text": "Nulle table ne peut remplacer le partage d’un repas simple orné d’une touche d’amour et d’amitié.",
+                        "auteur": "Martine Chaudey"
+                    }
+                    
+                }
+            } 
+        },
+        {
+            "id": 3,
+            "name": "Parmel'Hand",
+            "picture": "../../../assets/images/events/hbcf-parmelhand.jpg",
+            "details": {
+                "catchphrase": "Un thème chaque année, un repas assorti, des bénévoles pour vous servir et une soirée dansante...",
+                "content": {
+                    "title": "C'est notre traditionnelle soirée repas",
+                    "content": [
+                        "Tartiflette lors de la soirée Tartiflette lors de la soirée « Les Bronzés font du ski », Choucroute lors de la soirée alsacienne… Quel sera notre prochain thème ?",
+                        "À vous de le découvrir en participant à notre prochaine soirée repas du HBC Fillière !",
+                        "Service assuré par les licenciés de plus de 16 ans supervisés par les séniors, un DJ pour assurer la deuxième partie de la soirée… Et chaque année de nombreux lots à gagner lors de notre tombola !",
+                        "Suivez nous sur les réseaux afin de ne pas rater la date… et cochez la sur votre agenda dès qu’elle sera révélée !"
+                    ],
+                    "images": [
+                        {
+                            "link": "../../../assets/images/events/banniere-soiree-du-hand.webp",
+                            "alt" : "soiree_hp"
+                        }
+                    ],
+                    "citation": {
+                        "text": "Nulle table ne peut remplacer le partage d’un repas simple orné d’une touche d’amour et d’amitié.",
+                        "auteur": "Martine Chaudey"
+                    }
+                    
+                }
+            }
+        }
+    ],
+    "club": {
+        "history": {
+            "title": "Historique",
+            "content": {
+                "title": "Nous, c'est la Fillière",
+                "content": [
+                    "Ce n'est pas la peine de nous chercher sur une carte, tu trouveras seulement un groupement de communes dont celle de notre lieu de pratique ne fait même pas partie.",
+                    "Nous, notre nom, il vient d'une petite rivière qui traverse 9 communes que notre club regroupe... En 1986, nous avons posé nos valises au gymnase du Parmelan à Groisy, qui porte le nom d'une jolie montagne de chez nous !",
+                    "Et depuis, notre objectif c'est de permettre à nos licenciés de pratiquer leur passion dans les meilleures conditions. Et pour nous, les meilleures conditions sont la convivialité et l'ambiance familiale qui règne chez nous ! Mais le plus important c'est le respect.",
+                    "Et c'est de là  que nous vient notre devise :  « Le respect c'est déjà une victoire » ! Eh non, pour nous, ce n'est pas une simple excuse pour les défaites, c'est une véritable valeur depuis nos débuts.",
+                    "Nous formons une vraie famille violette, et nous accueillons avec plaisir tous ceu qui veulents la rejoindre, alors n'hésitez pas !"
+                ],
+                "image": [
+                    {
+                        "link": "../../../assets/images/club/logos/ancien_logo_hbcf.webp",
+                        "alt": "De 1986 à 2008, notre logo fût celui-ci.."
+                    },
+                    {
+                        "link": "../../../assets/images/club/logos/logo_moins ancien_hbcf.webp",
+                        "alt": "En 2008, il se refait une beauté"
+                    },
+                    {
+                        "link": "../../../assets/images/club/logos/logo_hbcf.png",
+                        "alt": "Avant de subir un relooking et devenir celui-là ! Glow up vous ne trouvez pas ?"
+                    }
+                ],
+                "citation": {
+                    "text": "Le respect c'est déjà une victoire.",
+                    "auteur": "Devise du HBC Fillière"
+                }
+            }
+        },
+        "numbers": {
+
+        },
+        "location": {
+
+        }
+    }
 }
