@@ -1,1 +1,9 @@
-<p>club-chiffres works!</p>
+<div class="club-content">
+    <h1 class="title">{{ numbers.title }}</h1>
+    <div class="numbers-content">
+        <div class="number-content" *ngFor="let number of numbers.numbers">
+            <p class="number-data text">{{ number.data }}</p>
+            <p class="number-description text">{{ number.description }}</p>
+        </div>
+    </div>
+</div>

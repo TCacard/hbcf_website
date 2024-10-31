@@ -1,1 +1,23 @@
-<p>club-localisation works!</p>
+<div class="club-content">
+    <h1 class="title">{{ location.title }}</h1>
+    <div class="global-content">
+        <div class="access-content">
+            <p class="part-title">{{ location.content.parts[0].title }}</p>
+            <div class="entries-content" *ngFor="let entry of location.content.parts[0].entries">
+                <p class="entry-name">{{ entry.name }}</p>
+                <p class="entry-text"> {{ entry.text }} </p>
+            </div>
+        </div>
+        <div class="location-content">
+            <p class="part-title">{{ location.content.parts[1].title }}</p>
+            <p 
+            [innerHTML]="location.content.parts[1].location" 
+            class="location-text"
+            (click)="openNavigation(location.content.parts[1].location)">
+          </p>
+          
+        </div>
+    </div>
+
+    <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5542.651923861123!2d6.176425504012094!3d46.004685851801916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b88f6300baec1%3A0x42e12aceb691cc5c!2sGymnase%20du%20Parmelan!5e0!3m2!1sfr!2sfr!4v1729525996507!5m2!1sfr!2sfr" width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>

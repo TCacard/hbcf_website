@@ -397,10 +397,49 @@
             }
         },
         "numbers": {
-
+            "title": "Chiffres clés",
+            "numbers": [
+                {
+                    "data": "326",
+                    "description": "Licenciés lors de la saison 2023/2024"
+                },
+                {
+                    "data": "11",
+                    "description": "Équipes engagées lors de la saison 2024/2025"       
+                },
+                {
+                    "data": "35",
+                    "description": "Entraineurs bénévoles lors de la saison 2023/2024"
+                },
+                {
+                    "data": "100%",
+                    "description": "De joueurs satisfaits"
+                }
+            ]
         },
         "location": {
-
+            "title": "Où nous trouver ?",
+            "content": {
+                "parts": [
+                    {
+                        "title" : "Deux accès possibles :",
+                        "entries" : [
+                            {
+                                "name" : "Sortie autoroute « Annecy Nord »",
+                                "text" : "Prendre la N203 en direction de la Roche-sur-Foron sur une douzaine de kilomètres. A Groisy « Le Plot », prendre à gauche, direction le Chef-Lieu sur environ 2 kilomètres. Une fois au Collège du Parmelan prendre la première à gauche. Le Gymnase est à 150 mètres."
+                            },
+                            {
+                                "name" : "Sortie autoroute « Cruseilles »",
+                                "text" : "Aux feux, traverser la nationale 201, continuer en direction de Groisy (environ 5 kms). Après le passage à niveau, continuer sur environ 800 m et au niveau du collège du Parmelan tourner à droite. Le Gymnase est à 150 mètres."
+                            }
+                        ]
+                    },
+                    {
+                        "title" : "Lieu de rencontre",
+                        "location" : "Gymnase du Parmelan <br/> 321 route de Lecy <br/> 75470 Groisy"
+                    }
+                ]
+            }
         }
     }
 }

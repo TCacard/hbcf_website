@@ -1,0 +1,83 @@
+div[leaflet] {
+    height: 100%; /* S'assure que la carte prend tout l'espace */
+    width: 100%;
+  }
+  
+  html, body, #app-club-localisation {
+    height: 100%; /* S'assure que les parents ont aussi une taille */
+  }
+
+  
+.club-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+    color: #6B5678;
+}
+
+.text{
+    color: #6B5678;
+}
+
+.title {
+    text-shadow: 4px 4px 4px #6B5678;
+    font-size: 36px;
+    color: #6B5678;
+    text-align: center;
+}
+
+.global-content {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.access-content {
+  width: 66%;
+}
+
+.part-title {
+ color: #A519FE;
+}
+
+.entries-content {
+  margin-bottom: 20px;
+}
+
+.entry-name {
+  font-weight: bold;
+}
+
+.entry-text {
+
+}
+
+.location-text {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.iframe {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .global-content {
+    flex-direction: column;
+  }
+
+  .location-content {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .access-content {
+    width: 80%;
+  }
+  
+  
+}

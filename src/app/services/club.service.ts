@@ -13,7 +13,7 @@ export class ClubDataService {
   constructor(private http: HttpClient) {}
 
   getServiceData(): Observable<any> {
-    return this.http.get<Event>(this.navUrl);
+    return this.http.get<any>(this.navUrl);
   }
 
   getServiceByName(name: string): Observable<any> {

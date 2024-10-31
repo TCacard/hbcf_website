@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { DataService } from './services/data.service';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
+import * as L from 'leaflet';
 
 @Component({
   selector: 'app-root',

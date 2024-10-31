@@ -1,16 +1,142 @@
 .club-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100%;
-    flex-direction: column;
+    margin: 20px 0;
 }
 
-.text {
+.text{
     color: #6B5678;
 }
 
 .title {
     text-shadow: 4px 4px 4px #6B5678;
-    font-size: 36px; /* Taille du titre augmentée */
+    font-size: 36px;
+    color: #6B5678;
+    text-align: center;
+}
+
+/* Texte en haut */
+.content-text {
+    width: 60%;
+    font-size: 1.3em;
+    text-align: justify;
+    margin: 20px 0;
+    color: #6B5678;
+}
+
+.content-field {
+    margin: 10px 0;
+}
+
+/* Conteneur pour les images et les traits alignés horizontalement */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 80%;
+}
+
+.image-block {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Cercle autour des images */
+.image-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #6B5678;
+    background-color: #CFBCDB;
+    // margin: 0 10px;
+}
+
+/* Styles pour l'image dans le cercle */
+.image-circle img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Texte sous les images */
+.image-alt {
+    font-size: 1em;
+    color: #6B5678;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 225px;
+}
+
+/* Trait reliant les images */
+.line {
+    width: 100%; /* Longueur du trait */
+    height: 1px; /* Épaisseur du trait */
+    background-color: #6B5678; /* Couleur du trait */
+    align-self: center; /* Centre le trait verticalement */
+}
+
+.noline {
+    width: 29%;
+}
+
+/* Citation en bas */
+app-citation {
+    width: 40%;
+    margin-top: 40px;
+    font-style: italic;
+    color: #6B5678;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .content-text {
+        width: 90%;
+    }
+
+    .image-container {
+        flex-direction: row;
+        height: 1000px;
+    }
+
+    .image-block {
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
+
+    .line {
+        width: 1px;
+        height: 100%;
+    }
+
+    .noline{
+        height: 10%;
+    }
+
+    .image-wrapper {
+        margin: 0 10px;
+    }
+
+    app-citation {
+        width: 80%;
+        padding: 10px;
+        margin-top: 100px;
+    }
+
+
+
 }

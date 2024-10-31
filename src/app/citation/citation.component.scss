@@ -1,43 +1,43 @@
 .quote {
-    border-radius: 0 !important;
     position: relative;
     border-top: 1px solid #6B5678;
     border-bottom: 1px solid #6B5678;
     padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
-    padding: 3% 2% !important;
     margin-bottom: 20px;
+    color: #6B5678;
 }
 
-/* Pseudo-élément pour le cercle et les guillemets */
-.quote::before {
-    content: '“';
+/* Cercle contenant le guillemet, positionné sur la bordure */
+.quote-mark {
     font-size: 30px;
     color: #6B5678;
     position: absolute;
-    top: -17px;
+    top: -21px; /* Positionne le cercle à cheval sur la bordure */
     left: 50%;
     transform: translateX(-50%);
     background-color: #CFBCDB;
     border: 1px solid #6B5678;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Style pour le texte de la citation */
+/* Texte de la citation */
 .quote p:first-child {
     font-style: italic;
     margin-bottom: 10px;
+    padding-top: 20px; /* Espace pour éviter que le texte ne touche le cercle */
     color: #6B5678;
 }
 
-/* Style pour l'auteur de la citation */
+/* Auteur de la citation */
 .quote p:last-child {
     font-weight: bold;
-    margin: 0;
+    // margin: 0;
     color: #6B5678;
 }
