@@ -68,7 +68,7 @@
             {
                 "id": 1,
                 "name": "Sénior filles",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp",
+                "image": "./assets/images/equipes/photo-d-equipe.webp",
                 "civilite": "Joueuses",
                 "details": {
                     "annees": "2006 et avant",
@@ -105,58 +105,58 @@
                             "surname": "Mailys",
                             "team": "Entraineur Nationale 3",
                             "phone": "07.67.73.18.54",
-                            "picture" : "../../../assets/images/entraineurs/may_boucher.png"
+                            "picture" : "./assets/images/entraineurs/may_boucher.png"
                         },
                         {
                             "name": "Antonelli",
                             "surname": "Jean-Marc",
                             "team": "Entraineur Nationale 3",
                             "phone": "06.85.72.39.84",
-                            "picture" : "../../../assets/images/entraineurs/jm_anto.png"
+                            "picture" : "./assets/images/entraineurs/jm_anto.png"
                         },
                         {
                             "name": "Berchiatti",
                             "surname": "Clément",
                             "team": "Entraineur Division Aura",
                             "phone": "07.67.73.18.54",
-                            "picture" : "../../../assets/images/entraineurs/clem_berch.png"
+                            "picture" : "./assets/images/entraineurs/clem_berch.png"
                         }
                     ],
                     "players" : [
                         {
                             "name":"Bouchet",
                             "surname": "Bertille",
-                            "picture" : "../../../assets/images/logo_hbcf.png"
+                            "picture" : "./assets/images/logo_hbcf.png"
                         },
                         {
                             "name":"Bouchet",
                             "surname": "Bertille",
-                            "picture" : "../../../assets/images/logo_hbcf.png"
+                            "picture" : "./assets/images/logo_hbcf.png"
                         },
                         {
                             "name":"Bouchet",
                             "surname": "Bertille",
-                            "picture" : "../../../assets/images/logo_hbcf.png"
+                            "picture" : "./assets/images/logo_hbcf.png"
                         },
                         {
                             "name":"Bouchet",
                             "surname": "Bertille",
-                            "picture" : "../../../assets/images/logo_hbcf.png"
+                            "picture" : "./assets/images/logo_hbcf.png"
                         },
                         {
                             "name":"Bouchet",
                             "surname": "Bertille",
-                            "picture" : "../../../assets/images/logo_hbcf.png"
+                            "picture" : "./assets/images/logo_hbcf.png"
                         },
                         {
                             "name":"Bouchet",
                             "surname": "Bertille",
-                            "picture" : "../../../assets/images/logo_hbcf.png"
+                            "picture" : "./assets/images/logo_hbcf.png"
                         },
                         {
                             "name":"Bouchet",
                             "surname": "Bertille",
-                            "picture" : "../../../assets/images/logo_hbcf.png"
+                            "picture" : "./assets/images/logo_hbcf.png"
                         }
                     ]
                 }
@@ -164,7 +164,7 @@
             {
                 "id": 2,
                 "name": "Senior garçons",
-                "image": "../../assets/images/equipes/sg.png",
+                "image": "./assets/images/equipes/sg.png",
                 "civilite": "Joueurs",
                 "details": {
                     "annee": "2006 et avant",
@@ -192,26 +192,26 @@
                             "surname": "Corentin",
                             "team": "Entraineur 1ère division AURA",
                             "phone": "**.**.**.**.**",
-                            "picture" : "../../../assets/images/entraineurs/jm_anto.png"
+                            "picture" : "./assets/images/entraineurs/jm_anto.png"
                         },
                         {
                             "name": "Cacard",
                             "surname": "Damien",
                             "team": "Entraineur Gardiens",
                             "phone": "**.**.**.**.**",
-                            "picture" : "../../../assets/images/entraineurs/jm_anto.png"
+                            "picture" : "./assets/images/entraineurs/jm_anto.png"
                         }
                     ],
                     "players" : [
                         {
                             "name":"Sarciat",
                             "surname": "Antoine",
-                            "picture" : "../../../assets/images/logo_hbcf.png"
+                            "picture" : "./assets/images/logo_hbcf.png"
                         },
                         {
                             "name":"Cacard",
                             "surname": "Théo",
-                            "picture" : "../../../assets/images/logo_hbcf.png"
+                            "picture" : "./assets/images/logo_hbcf.png"
                         }
                     ]
                 }
@@ -219,64 +219,64 @@
             {
                 "id": 3,
                 "name": "senior filles",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             },
             {
                 "id": 4,
                 "name": "senior filles",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             },
             {
                 "id": 5,
                 "name": "senior filles",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             },
             {
                 "id": 6,
                 "name": "senior filles",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             },
             {
                 "id": 7,
                 "name": "senior filles",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             }
         ],
         "leading_teams": [
             {
                 "id": 8,
                 "name": "Commission Sportive",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             },
             {
                 "id": 9,
                 "name": "Commission Arbitrage",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             },
             {
                 "id": 10,
                 "name": "Commission Communication",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             },
             {
                 "id": 11,
                 "name": "Commission Animation",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             },
             {
                 "id": 12,
                 "name": "Commission Equipement",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             },
             {
                 "id": 13,
                 "name": "Commission Partenaires",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             },
             {
                 "id": 14,
                 "name": "Commission Ethique",
-                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+                "image": "./assets/images/equipes/photo-d-equipe.webp"
             }
         ]
     },
@@ -284,7 +284,7 @@
         {
             "id": 1,
             "name": "Soirée du Club",
-            "picture": "../../../assets/images/events/soiree_club.jpg",
+            "picture": "./assets/images/events/soiree_club.jpg",
             "details": {
                 "catchphrase": "Un thème chaque année, un repas assorti, des bénévoles pour vous servir et une soirée dansante...",
                 "content": {
@@ -297,7 +297,7 @@
                     ],
                     "images": [
                         {
-                            "link": "../../../assets/images/events/banniere-soiree-du-hand.webp",
+                            "link": "./assets/images/events/banniere-soiree-du-hand.webp",
                             "alt" : "soiree_hp"
                         }
                     ],
@@ -312,7 +312,7 @@
         {
             "id": 2,
             "name": "Foire de la saint André",
-            "picture": "../../../assets/images/events/hbcf-saint-andre.png",
+            "picture": "./assets/images/events/hbcf-saint-andre.png",
             "details": {
                 "catchphrase": "Un thème chaque année, un repas assorti, des bénévoles pour vous servir et une soirée dansante...",
                 "content": {
@@ -325,7 +325,7 @@
                     ],
                     "images": [
                         {
-                            "link": "../../../assets/images/events/banniere-soiree-du-hand.webp",
+                            "link": "./assets/images/events/banniere-soiree-du-hand.webp",
                             "alt" : "soiree_hp"
                         }
                     ],
@@ -340,7 +340,7 @@
         {
             "id": 3,
             "name": "Parmel'Hand",
-            "picture": "../../../assets/images/events/hbcf-parmelhand.jpg",
+            "picture": "./assets/images/events/hbcf-parmelhand.jpg",
             "details": {
                 "catchphrase": "Un thème chaque année, un repas assorti, des bénévoles pour vous servir et une soirée dansante...",
                 "content": {
@@ -353,7 +353,7 @@
                     ],
                     "images": [
                         {
-                            "link": "../../../assets/images/events/banniere-soiree-du-hand.webp",
+                            "link": "./assets/images/events/banniere-soiree-du-hand.webp",
                             "alt" : "soiree_hp"
                         }
                     ],
@@ -380,15 +380,15 @@
                 ],
                 "image": [
                     {
-                        "link": "../../../assets/images/club/logos/ancien_logo_hbcf.webp",
+                        "link": "./assets/images/club/logos/ancien_logo_hbcf.webp",
                         "alt": "De 1986 à 2008, notre logo fût celui-ci.."
                     },
                     {
-                        "link": "../../../assets/images/club/logos/logo_moins ancien_hbcf.webp",
+                        "link": "./assets/images/club/logos/logo_moins ancien_hbcf.webp",
                         "alt": "En 2008, il se refait une beauté"
                     },
                     {
-                        "link": "../../../assets/images/club/logos/logo_hbcf.png",
+                        "link": "./assets/images/club/logos/logo_hbcf.png",
                         "alt": "Avant de subir un relooking et devenir celui-là ! Glow up vous ne trouvez pas ?"
                     }
                 ],
@@ -451,42 +451,42 @@
             "partners_list": [
                 {
                     "name": "VF Enseigne",
-                    "logo": "../../../assets/images/partners/vf-enseignre.png",
+                    "logo": "./assets/images/partners/vf-enseignre.png",
                     "link": "https://www.vf-enseigne.fr"
                 },                {
                     "name": "Le petit casino Thorens-Glière",
-                    "logo": "../../../assets/images/partners/le-petit-casino.png"
+                    "logo": "./assets/images/partners/le-petit-casino.png"
                 },
                 {
                     "name": "Duret Didier et Fils",
-                    "logo": "../../../assets/images/partners/duret-didier.png"
+                    "logo": "./assets/images/partners/duret-didier.png"
                 },
                 {
                     "name": "Didier Tissot arboriculteur",
-                    "logo": "../../../assets/images/partners/didier-tissot.png",
+                    "logo": "./assets/images/partners/didier-tissot.png",
                     "link": "https://www.vergerstissot.fr"
                 },
                 {
                     "name": "Teamsport 2000",
-                    "logo": "../../../assets/images/partners/sport-2000.png",
+                    "logo": "./assets/images/partners/sport-2000.png",
                     "link": "https://www.sport2000.fr/magasins/fiche/741322-sport-2000-amancy"
                 },
                 {
                     "name": "ACB Group",
-                    "logo": "../../../assets/images/partners/acb-1.png",
+                    "logo": "./assets/images/partners/acb-1.png",
                     "link": "https://www.acb-groupe.fr"
                 },
                 {
                     "name": "Agencement Menuiserie Dumas",
-                    "logo": "../../../assets/images/partners/amd.png"
+                    "logo": "./assets/images/partners/amd.png"
                 },
                 {
                     "name": "Annecy Auto Service",
-                    "logo": "../../../assets/images/partners/annecy-auto-service.png"
+                    "logo": "./assets/images/partners/annecy-auto-service.png"
                 },
                 {
                     "name": "Annecy Thermolaquage",
-                    "logo": "../../../assets/images/partners/annecy-thermolaquage.png"
+                    "logo": "./assets/images/partners/annecy-thermolaquage.png"
                 }
             ]
         },
@@ -523,142 +523,142 @@
         "photos": [
             {
                 "name": "2024 - AGH - SF1 (PN)",
-                "image": "../../../assets/images/gallery/2024-agh-sf1(pn).jpg",
+                "image": "./assets/images/gallery/2024-agh-sf1(pn).jpg",
                 "link": "https://drive.google.com/drive/folders/1aKgFzLaMBYTY31RyVnUVAQLLARWljg_2?usp=drive_link"
             },
             {
                 "name": "Cross du cœur - 20.04.2024", 
-                "image": "../../../assets/images/gallery/cross_du_coeur.jpg",
+                "image": "./assets/images/gallery/cross_du_coeur.jpg",
                 "link": "https://drive.google.com/drive/folders/1xxCNn78gBOhvbPNoM5CG8ya-0I6fl4MA?usp=drive_link"
             },
             {
                 "name": "2023 - HBCF SF - Guilherand",
-                "image": "../../../assets/images/gallery/2023-hbcfsf-guilherand.jpg",
+                "image": "./assets/images/gallery/2023-hbcfsf-guilherand.jpg",
                 "link": "https://drive.google.com/drive/folders/1sLJCidTuvORZuV5b9aDeQsEg-BeG5-g8?usp=sharing"
             },
             {
                 "name": "2023 - HBCF 18G - Evian",
-                "image": "../../../assets/images/gallery/2023-hbcf18g-evian.jpg",
+                "image": "./assets/images/gallery/2023-hbcf18g-evian.jpg",
                 "link": "https://drive.google.com/drive/folders/19GGufNoRy7UNPG5PAxkUVrg7H9IVJ6ct?usp=sharing"
             },
             {
                 "name": "2023 - Partenaires",
-                "image": "../../../assets/images/gallery/2023-partners.jpeg",
+                "image": "./assets/images/gallery/2023-partners.jpeg",
                 "link": "https://drive.google.com/drive/folders/1IycpdHyBSxX9eq8kSJMxSUDJJF-PoJH-?usp=sharing"
             },
             {
                 "name": "Parmel'hand 2023",
-                "image": "../../../assets/images/gallery/parmelhand-2023.jpeg",
+                "image": "./assets/images/gallery/parmelhand-2023.jpeg",
                 "link": "https://drive.google.com/drive/folders/1SSFfK5s3xR-SqY8UaYCQymBuHyPzZ1jm?usp=sharing"
             },
             {
                 "name": "HBCF - 18G - Sallanches",
-                "image": "../../../assets/images/gallery/hbcf-18g-sallanches.jpg",
+                "image": "./assets/images/gallery/hbcf-18g-sallanches.jpg",
                 "link": "https://drive.google.com/drive/folders/1TutiSpir1FTDvA-34R07ebYlqRHDSZ_7?usp=sharing"
             },
             {
                 "name": "2023 - Soirée Repas Médiévales",
-                "image": "../../../assets/images/gallery/soiree-repas-medievales-2023.jpg",
+                "image": "./assets/images/gallery/soiree-repas-medievales-2023.jpg",
                 "link": "https://photos.app.goo.gl/1iw3PFLAwRt4adTFA"
             },
             {
                 "name": "Saison 2022/2023",
-                "image": "../../../assets/images/gallery/saison-2022-2023.jpg",
+                "image": "./assets/images/gallery/saison-2022-2023.jpg",
                 "link": "https://photos.app.goo.gl/SdbrctePS9vAocur5"
             },
             {
                 "name": "2022 - Diaporama 35 ans du club",
-                "image": "../../../assets/images/gallery/2022-diaporama-35-ans-du-club.jpg",
+                "image": "./assets/images/gallery/2022-diaporama-35-ans-du-club.jpg",
                 "link": "https://photos.app.goo.gl/USHGdnNpQFayFh1t6"
             },
             {
                 "name": "2022 - Soirée Far West",
-                "image": "../../../assets/images/gallery/2022-soiree-far-west.jpg",
+                "image": "./assets/images/gallery/2022-soiree-far-west.jpg",
                 "link": "https://photos.app.goo.gl/FNrs7EQpqL1if9wTA"
             },
             {
                 "name": "SF2 - HBC Fillière 23 - 25 Bourgetain",
-                "image": "../../../assets/images/gallery/SF2-bourgetain.jpg",
+                "image": "./assets/images/gallery/SF2-bourgetain.jpg",
                 "link": "https://photos.app.goo.gl/p5dZ63xxJxe2GyEL6"
             },
             {
                 "name": "SF1 HBC Fillière 30 - 26 CSAV Handball",
-                "image": "../../../assets/images/gallery/SF1-CSAV.jpg",
+                "image": "./assets/images/gallery/SF1-CSAV.jpg",
                 "link": "https://photos.app.goo.gl/rvndM9UnoHb9zznt6"
             },
             {
                 "name": "Parmel'hand 2022",
-                "image": "../../../assets/images/gallery/parmelhand-2022.jpg",
+                "image": "./assets/images/gallery/parmelhand-2022.jpg",
                 "link": "https://photos.app.goo.gl/v8iDAWfyriYfiwTy7"
             },
             {
                 "name": "Saison 2021/2022 - National 3 Féminine",
-                "image": "../../../assets/images/gallery/saison-2021-2022-n3.jpg",
+                "image": "./assets/images/gallery/saison-2021-2022-n3.jpg",
                 "link": "https://photos.app.goo.gl/ZFp7UwAJgrw42rhA7"
             },
             {
                 "name": "2021 - Stage de Juillet",
-                "image": "../../../assets/images/gallery/hbcf-stage-juillet-2021.jpg",
+                "image": "./assets/images/gallery/hbcf-stage-juillet-2021.jpg",
                 "link": "https://drive.google.com/drive/folders/1bKvuq6MliWLh5F_KJPXOmVF6kCPiK9cP?usp=sharing"
             },
             {
                 "name": "2021 - Stage d'Août",
-                "image": "../../../assets/images/gallery/hbcf-stage-aout-2021.jpg",
+                "image": "./assets/images/gallery/hbcf-stage-aout-2021.jpg",
                 "link": "https://drive.google.com/drive/folders/1H3Pxqa7OrVAhSAuI1yf40Fn6jNQvekfK?usp=sharing"
             },
             {
                 "name": "2021 - SF2 vs Montmélihand",
-                "image": "../../../assets/images/gallery/hbcf-sf2-vs-montmelihand-2021.jpg",
+                "image": "./assets/images/gallery/hbcf-sf2-vs-montmelihand-2021.jpg",
                 "link": "https://drive.google.com/drive/folders/15zyVgMB5RhCI463b86--7ylFotQzpZWH?usp=sharing"
             },
             {
                 "name": "2021 - SF1 vs Annecy/Sallanches",
-                "image": "../../../assets/images/gallery/hbcf-sf1-vs-annecysallanches-2021.jpg",
+                "image": "./assets/images/gallery/hbcf-sf1-vs-annecysallanches-2021.jpg",
                 "link": "https://drive.google.com/drive/folders/1xIiWDcFETATRMRqCKBmxpVonNI8B_Chh?usp=sharing"
             },
             {
                 "name": "2021 - CSAV vs N3 Féminine",
-                "image": "../../../assets/images/gallery/2021-csav-n3-3.jpg",
+                "image": "./assets/images/gallery/2021-csav-n3-3.jpg",
                 "link": "https://photos.app.goo.gl/jqJ7yQCjcbSYvQVG9"
             },
             {
                 "name": "2020 - Soirée Repas - Les Bronzés",
-                "image": "../../../assets/images/gallery/2020-soiree-les-bronze.jpg",
+                "image": "./assets/images/gallery/2020-soiree-les-bronze.jpg",
                 "link": "https://photos.app.goo.gl/YirnWb3RLsTVtfxS8"
             },
             {
                 "name": "Photos individuelles 2020-2021",
-                "image": "../../../assets/images/gallery/2023-hbcfsf-guilherand.jpg",
+                "image": "./assets/images/gallery/2023-hbcfsf-guilherand.jpg",
                 "link": "https://photos.app.goo.gl/x71XqjC3nP5VGRb9A"
             },
             {
                 "name": "2021 - Parmel'hand",
-                "image": "../../../assets/images/gallery/2021-parmelhand.jpg",
+                "image": "./assets/images/gallery/2021-parmelhand.jpg",
                 "link": "https://photos.app.goo.gl/aiZ2zMZry8zc95zv7"
             },
             {
                 "name": "2019 - Moins 13G vs Aix les bains",
-                "image": "../../../assets/images/gallery/2019-13g-aix-les-bains.webp",
+                "image": "./assets/images/gallery/2019-13g-aix-les-bains.webp",
                 "link": "https://photos.app.goo.gl/rMHd5Rx1YGB5v3737"
             },
             {
                 "name": "2019 - SG1 vs Bourg en bresse",
-                "image": "../../../assets/images/gallery/2019-sg1-bourg-en-bresse.jpg",
+                "image": "./assets/images/gallery/2019-sg1-bourg-en-bresse.jpg",
                 "link": "https://photos.app.goo.gl/cL6iXkVFh439XCP49"
             },
             {
                 "name": "2019 - Match SF1 vs Porte de l'Isère",
-                "image": "../../../assets/images/gallery/2019-sf1-porte-isere.webp",
+                "image": "./assets/images/gallery/2019-sf1-porte-isere.webp",
                 "link": "https://photos.app.goo.gl/YRNFWENxiSYLscDQ6"
             },
             {
                 "name": "2019 - Moins 18F vs CSAV",
-                "image": "../../../assets/images/gallery/18f-hbcf-csav-2019.webp",
+                "image": "./assets/images/gallery/18f-hbcf-csav-2019.webp",
                 "link": "https://photos.app.goo.gl/43wNeaLDwhWsqFHm6"
             },
             {
                 "name": "2019 - Tournoi Parmel'hand Loisirs et Jeunes",
-                "image": "../../../assets/images/gallery/2019-parmelhand.jpg",
+                "image": "./assets/images/gallery/2019-parmelhand.jpg",
                 "link": "https://photos.app.goo.gl/yvdrtip2sxUEXcHj7"
             }
         ]
@@ -697,7 +697,7 @@
                     }
                 ],
                 "images": [
-                    "../../../assets/images/news/vente_t-shirts.webp"
+                    "./assets/images/news/vente_t-shirts.webp"
                 ],
                 "publishDate": "2024-09-29",
                 "author": "Handball Club de la Fillière",
@@ -749,7 +749,7 @@
                     }
                 ],
                 "images": [
-                    "../../../assets/images/news/join-us-.webp"
+                    "./assets/images/news/join-us-.webp"
                 ],
                 "publishDate": "2024-07-17",
                 "author": "Handball Club de la Fillière",
@@ -805,7 +805,7 @@
                     }
                 ],
                 "images": [
-                    "../../../assets/images/news/comm-album.webp"
+                    "./assets/images/news/comm-album.webp"
                 ],
                 "publishDate": "2024-04-29",
                 "author": "Handball Club de la Fillière",
