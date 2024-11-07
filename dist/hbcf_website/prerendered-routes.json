@@ -1,0 +1,18 @@
+{
+  "routes": [
+    "/accueil",
+    "/club",
+    "/club/history",
+    "/club/location",
+    "/club/numbers",
+    "/contact",
+    "/equipes",
+    "/evenements",
+    "/gallery",
+    "/inscriptions",
+    "/news",
+    "/partners",
+    "/partners/actual_partners",
+    "/partners/become_partners"
+  ]
+}
