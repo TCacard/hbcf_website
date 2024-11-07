@@ -1,0 +1,18 @@
+<div class="news-container">
+    <h1 class="title">{{ news.title }}</h1>
+    <div class="news-list" *ngFor="let newsItem of news.news; let i = index" (click)="navigateToNews(newsItem.id)">
+        <div class="news-separator" *ngIf="i > 0"></div>
+        <div class="news-item">
+            <img class="news-image" src="{{ newsItem.images[0] }}" alt="{{ newsItem.title }}">
+            <div class="news-content">
+                <h2 class="news-title">{{ newsItem.title }}</h2>
+                <p class="news-summary">{{ newsItem.summary }}</p>
+                <div class="news-date">
+                    <p class="news-date-item date">{{ newsItem.publishDate | date: 'dd/MM/yyyy' }}</p>
+                    <p> - </p>
+                    <p class="news-date-item author">{{ newsItem.author }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

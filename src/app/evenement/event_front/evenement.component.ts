@@ -24,7 +24,7 @@ export class EvenementComponent {
 
   ngOnInit() {
     this.eventService.getEventData().subscribe((data: any) => {
-      this.events = data.events;
+      this.events = data;
     });
 
   }

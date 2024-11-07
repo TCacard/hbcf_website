@@ -1,12 +1,36 @@
-<div class="club-content text">
+<div class="club-content">
     <h1 class="title">{{ history.title }}</h1>
-    <div *ngFor="let text of history.content.content">
-        <p>{{ text }}</p>
+
+    <!-- Texte affiché en paragraphe -->
+    <div class="content-text">
+        <p *ngFor="let text of history.content.content" class="content-field">{{ text }}</p>
     </div>
 
-    <div *ngFor="let img of history.content.image">
-        <img  [src]="img.link" [alt]="img.alt">
-        <p>{{ img.alt }}</p>
+    <!-- Images alignées avec des traits horizontaux -->
+    <div class="image-container">
+        <div class="image-block">
+            <ng-container *ngFor="let img of history.content.image; let i = index">
+                <div class="image-wrapper">
+                    <div class="image-circle">
+                        <img [src]="img.link" [alt]="img.alt">
+                    </div>
+                </div>
+                <!-- Trait uniquement si ce n'est pas la dernière image -->
+                <div *ngIf="i < history.content.image.length - 1" class="line"></div>
+            </ng-container>
+        </div>
+
+        <div class="image-block">
+            <ng-container *ngFor="let img of history.content.image; let i = index">
+                <div class="image-wrapper">
+                    <p class="text">{{ img.alt }}</p>
+                </div>
+                <!-- Ajouter un trait entre les descriptions si nécessaire -->
+                <div *ngIf="i < history.content.image.length - 1" class="noline"></div>
+            </ng-container>
+        </div>
     </div>
+
+    <!-- Citation en bas -->
     <app-citation [citation]="history.content.citation"></app-citation>
 </div>

@@ -38,3 +38,42 @@
     height: auto;
     z-index: 1;
 }
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    flex: 0 0 100%;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .carousel-control {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    
+    &:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }

@@ -3,4 +3,22 @@
     <h1 class="title primary-title">HANDBALL CLUB DE LA FILLIERE</h1>
     <h2 class="title secondary-title">CLUB DE HANDBALL DE HAUTE-SAVOIE</h2>
     <img src="../../assets/images/image_acceuil.png" alt="accueil" class="blur_img">
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-item" *ngFor="let item of combinedItems">
+            <div class="card">
+                <img [src]="item.image" [alt]="item.title" class="card-image" *ngIf="item.image">
+                <div class="card-content">
+                    <h3 class="card-title">{{item.title}}</h3>
+                    <p class="card-text">{{item.description}}</p>
+                    <div class="card-date" *ngIf="item.date">{{item.date | date:'dd/MM/yyyy'}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-controls">
+        <button class="carousel-control prev" (click)="prevSlide()">&lt;</button>
+        <button class="carousel-control next" (click)="nextSlide()">&gt;</button>
+    </div>
+</div>
 </div>

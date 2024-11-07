@@ -1,1 +1,39 @@
-<p>galerie works!</p>
+<div class="galerie-container">
+    <h1 class="title text">{{ galleryName }}</h1>
+    <div class="gallery-carousel">
+        <div class="carousel-container">
+            <div class="carousel-track" #track>
+                <div class="carousel-slide">
+                    <a [href]="randomPhotos[currentSlide].link" target="_blank" class="photo-link">
+                        <img [src]="randomPhotos[currentSlide].image" [alt]="randomPhotos[currentSlide].name" class="carousel-photo">
+                        <div class="photo-caption text">{{ randomPhotos[currentSlide].name }}</div>
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-button prev" (click)="prevSlide()">&#10094;</button>
+            <button class="carousel-button next" (click)="nextSlide()">&#10095;</button>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot" *ngFor="let photo of randomPhotos; let i = index" 
+                  [class.active]="currentSlide === i"
+                  (click)="goToSlide(i)">
+            </span>
+        </div>
+    </div>
+    <div class="gallery-grid">
+        <div class="gallery-item" *ngFor="let photo of photos">
+            <div class="image-container" (click)="navigateToPhoto(photo.link)">
+                <img [src]="photo.image" [alt]="photo.name" class="grid-image">
+                <div class="wave-overlay">
+                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave">
+                        <path d="M0,75 C150,150 350,0 500,100 L500,150 L0,150 Z"></path>
+                    </svg>
+                    <span class="gallery-name">{{photo.name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

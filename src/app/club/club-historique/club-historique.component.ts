@@ -27,7 +27,7 @@ export class ClubHistoriqueComponent {
 
   ngOnInit() {
     const name = this.route.snapshot.routeConfig?.path ?? ""
-    this.clubService.getServiceByName(name).subscribe((data: any) => {
+    this.clubService.getClubHistory().subscribe((data: any) => {
       this.history = data
     });
 

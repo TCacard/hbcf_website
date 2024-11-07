@@ -12,14 +12,37 @@ export class TeamsService {
 
   constructor(private http: HttpClient) {}
 
-  getTeamData(): Observable<any> {
-    return this.http.get<Team>(this.navUrl);
+  getLeadingTeams(): Observable<any> {
+    return this.http.get<any>(this.navUrl).pipe(
+      map(data => data.teams.leading_teams)
+    );
+  }
+
+  getCompetitionTeams(): Observable<any> {
+    return this.http.get<any>(this.navUrl).pipe(
+      map(data => data.teams.competition_teams)
+    );
+  }
+
+  getAllTeams(): Observable<any> {
+    return new Observable(observer => {
+      Promise.all([
+        this.getCompetitionTeams().toPromise(),
+        this.getLeadingTeams().toPromise()
+      ]).then(([competitionTeams, leadingTeams]) => {
+        observer.next({
+          competition_teams: competitionTeams,
+          leading_teams: leadingTeams
+        });
+        observer.complete();
+      });
+    });
   }
 
   getTeamById(id: number): Observable<any> {
-    return this.getTeamData().pipe(
+    return this.getAllTeams().pipe(
       map(data => {
-        const allTeams = [...data.equipes.equipes_competition, ...data.equipes.equipe_dirigeante];
+        const allTeams = [...data.competition_teams, ...data.leading_teams];
         return allTeams.find(team => team.id === id);
       })
     );

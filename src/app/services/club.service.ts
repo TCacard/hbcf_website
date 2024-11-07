@@ -12,15 +12,21 @@ export class ClubDataService {
 
   constructor(private http: HttpClient) {}
 
-  getServiceData(): Observable<any> {
-    return this.http.get<Event>(this.navUrl);
+  getClubHistory(): Observable<any> {
+      return this.http.get<any>(this.navUrl).pipe(
+        map(data => data.club.history)
+      );
   }
 
-  getServiceByName(name: string): Observable<any> {
-    return this.getServiceData().pipe(
-      map(data => {
-        return data.club[name]
-      })
+  getClubNumbers(): Observable<any> {
+    return this.http.get<any>(this.navUrl).pipe(
+      map(data => data.club.numbers)
+    );
+  }
+
+  getClubLocation(): Observable<any> {
+    return this.http.get<any>(this.navUrl).pipe(
+      map(data => data.club.location)
     );
   }
 }

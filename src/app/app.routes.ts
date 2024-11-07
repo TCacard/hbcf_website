@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
-import { AcutalitesComponent } from './acutalites/acutalites.component';
 import { GalerieComponent } from './galerie/galerie.component';
 import { ContactComponent } from './contact/contact.component';
 import { InscriptionComponent } from './inscription/inscription.component';
@@ -20,8 +19,15 @@ export const routes: Routes = [
         path: 'club',
         loadChildren: () => import('./club/club.routes').then(mod => mod.CLUB_ROUTES)
     },
-    { path: 'galerie', component: GalerieComponent },
-    { path: 'actus', component: AcutalitesComponent },
+    {
+        path: 'partners',
+        loadChildren: () => import('./partners/partners.routes').then(mod => mod.PARTNERS_ROUTES)
+    },
+    { path: 'gallery', component: GalerieComponent },
+    {
+        path: 'news',
+        loadChildren: () => import('./news/news_routes').then(mod => mod.NEWS_ROUTES)
+    },
     { path: 'contact', component: ContactComponent },
     { path: 'inscriptions', component: InscriptionComponent },
 

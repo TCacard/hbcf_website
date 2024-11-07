@@ -34,8 +34,8 @@ export class HeaderComponent implements OnInit {
   constructor(private navDataService: NavDataService) {}
 
   ngOnInit() {
-    this.navDataService.getNavData().subscribe((data: Navigation) => {
-      this.navItems = data.nav;
+    this.navDataService.getNavData().subscribe((data: any) => {
+      this.navItems = data;
       this.isSubItemsVisible = new Array(this.navItems.length).fill(false);
     });
   }

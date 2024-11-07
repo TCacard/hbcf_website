@@ -1,0 +1,14 @@
+<div class="partners-container">
+  <h1 class="title">{{partners?.title}}</h1>
+  
+  <div class="partners-grid">
+    <div class="partner-card" *ngFor="let partner of partners?.partners_list" (click)="navigateToPartner(partner.link)">
+      <div class="partner-logo-container">
+        <img [src]="partner.logo" [alt]="partner.name" class="partner-logo">
+      </div>
+      <div class="partner-info">
+        <h3>{{partner.name}}</h3>
+      </div>
+    </div>
+  </div>
+</div>

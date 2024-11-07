@@ -1,0 +1,718 @@
+{
+    "nav" : [
+        {
+            "title" : "Accueil",
+            "route" : "/accueil"
+        },
+        {
+            "title" : "Club",
+            "subTitles" : [
+                {
+                    "title" : "historique",
+                    "route" : "/club/history"
+                },
+                {
+                    "title" : "Où nous trouver ?",
+                    "route": "/club/location"
+                },
+                {
+                    "title" : "En quelques chiffres",
+                    "route": "/club/numbers"
+                }
+            ] 
+        },
+        {
+            "title" : "Équipes",
+            "route": "/equipes"
+        },
+        {
+            "title" : "Évènements",
+            "route" : "/evenements"
+        },
+        {
+            "title" : "Partenaire",
+            "subTitles" : [
+                {
+                    "title" : "Nos partenaires",
+                    "route" : "/partners/actual_partners"
+                },
+                {
+                    "title" : "Devenir un partenaire",
+                    "route" : "/partners/become_partners"
+                }
+            ]
+        },
+        {
+            "title" : "Galerie",
+            "route" : "/gallery"
+        },
+        {
+            "title" : "Actualités",
+            "route" : "/news"
+        },
+        {
+            "title" : "Contact",
+            "route" : "/contact"
+        },
+        {
+            "title" : "S'inscrire",
+            "route" : "inscriptions"
+        },
+        {
+            "title" : "Boutique",
+            "route": "https://www.teamsport2000.com/1395-hbc-filliere"
+        }
+    ],
+    "teams": {
+        "competition_teams": [
+            {
+                "id": 1,
+                "name": "Sénior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp",
+                "civilite": "Joueuses",
+                "details": {
+                    "annees": "2006 et avant",
+                    "niveau" : [
+                        {
+                            "equipe": "SF1",
+                            "niveau": "Nationale 3"
+                        },
+                        {
+                            "equipe": "SF2",
+                            "niveau": "1ère division AURA"
+                        }
+                    ],
+                    "entrainements": [
+                        {
+                            "jour": "Mercredi",
+                            "horaire": "20h30-22h",
+                            "equipe": "SF1"
+                        },
+                        {
+                            "jour": "Jeudi",
+                            "horaire": "19h00-20h30",
+                            "equipe": "SF2"
+                        },
+                        {
+                            "jour": "Vendredi",
+                            "horaire": "20h30-22h",
+                            "equipe": "SF1-SF2"
+                        }
+                    ],
+                    "entraineurs": [
+                        {
+                            "name": "Boucherba",
+                            "surname": "Mailys",
+                            "team": "Entraineur Nationale 3",
+                            "phone": "07.67.73.18.54",
+                            "picture" : "../../../assets/images/entraineurs/may_boucher.png"
+                        },
+                        {
+                            "name": "Antonelli",
+                            "surname": "Jean-Marc",
+                            "team": "Entraineur Nationale 3",
+                            "phone": "06.85.72.39.84",
+                            "picture" : "../../../assets/images/entraineurs/jm_anto.png"
+                        },
+                        {
+                            "name": "Berchiatti",
+                            "surname": "Clément",
+                            "team": "Entraineur Division Aura",
+                            "phone": "07.67.73.18.54",
+                            "picture" : "../../../assets/images/entraineurs/clem_berch.png"
+                        }
+                    ],
+                    "players" : [
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Bouchet",
+                            "surname": "Bertille",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 2,
+                "name": "Senior garçons",
+                "image": "../../assets/images/equipes/sg.png",
+                "civilite": "Joueurs",
+                "details": {
+                    "annee": "2006 et avant",
+                    "niveau" : [
+                        {
+                            "equipe": "SG1",
+                            "niveau": "1ère division AURA"
+                        }
+                    ],
+                    "entrainements": [
+                        {
+                            "jour": "Mardi",
+                            "horaire": "20h30-22h",
+                            "equipe": "SG1"
+                        },
+                        {
+                            "jour": "Jeudi",
+                            "horaire": "20h30-22h",
+                            "equipe": "SG1"
+                        }
+                    ],
+                    "entraineurs": [
+                        {
+                            "name": "Brasseur",
+                            "surname": "Corentin",
+                            "team": "Entraineur 1ère division AURA",
+                            "phone": "**.**.**.**.**",
+                            "picture" : "../../../assets/images/entraineurs/jm_anto.png"
+                        },
+                        {
+                            "name": "Cacard",
+                            "surname": "Damien",
+                            "team": "Entraineur Gardiens",
+                            "phone": "**.**.**.**.**",
+                            "picture" : "../../../assets/images/entraineurs/jm_anto.png"
+                        }
+                    ],
+                    "players" : [
+                        {
+                            "name":"Sarciat",
+                            "surname": "Antoine",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        },
+                        {
+                            "name":"Cacard",
+                            "surname": "Théo",
+                            "picture" : "../../../assets/images/logo_hbcf.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 3,
+                "name": "senior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 4,
+                "name": "senior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 5,
+                "name": "senior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 6,
+                "name": "senior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 7,
+                "name": "senior filles",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            }
+        ],
+        "leading_teams": [
+            {
+                "id": 8,
+                "name": "Commission Sportive",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 9,
+                "name": "Commission Arbitrage",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 10,
+                "name": "Commission Communication",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 11,
+                "name": "Commission Animation",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 12,
+                "name": "Commission Equipement",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 13,
+                "name": "Commission Partenaires",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            },
+            {
+                "id": 14,
+                "name": "Commission Ethique",
+                "image": "../../assets/images/equipes/photo-d-equipe.webp"
+            }
+        ]
+    },
+    "events": [
+        {
+            "id": 1,
+            "name": "Soirée du Club",
+            "picture": "../../../assets/images/events/soiree_club.jpg",
+            "details": {
+                "catchphrase": "Un thème chaque année, un repas assorti, des bénévoles pour vous servir et une soirée dansante...",
+                "content": {
+                    "title": "C'est notre traditionnelle soirée repas",
+                    "content": [
+                        "Tartiflette lors de la soirée Tartiflette lors de la soirée « Les Bronzés font du ski », Choucroute lors de la soirée alsacienne… Quel sera notre prochain thème ?",
+                        "À vous de le découvrir en participant à notre prochaine soirée repas du HBC Fillière !",
+                        "Service assuré par les licenciés de plus de 16 ans supervisés par les séniors, un DJ pour assurer la deuxième partie de la soirée… Et chaque année de nombreux lots à gagner lors de notre tombola !",
+                        "Suivez nous sur les réseaux afin de ne pas rater la date… et cochez la sur votre agenda dès qu’elle sera révélée !"
+                    ],
+                    "images": [
+                        {
+                            "link": "../../../assets/images/events/banniere-soiree-du-hand.webp",
+                            "alt" : "soiree_hp"
+                        }
+                    ],
+                    "citation": {
+                        "text": "Nulle table ne peut remplacer le partage d’un repas simple orné d’une touche d’amour et d’amitié.",
+                        "auteur": "Martine Chaudey"
+                    }
+                    
+                }
+            }
+        },
+        {
+            "id": 2,
+            "name": "Foire de la saint André",
+            "picture": "../../../assets/images/events/hbcf-saint-andre.png",
+            "details": {
+                "catchphrase": "Un thème chaque année, un repas assorti, des bénévoles pour vous servir et une soirée dansante...",
+                "content": {
+                    "title": "C'est notre traditionnelle soirée repas",
+                    "content": [
+                        "Tartiflette lors de la soirée Tartiflette lors de la soirée « Les Bronzés font du ski », Choucroute lors de la soirée alsacienne… Quel sera notre prochain thème ?",
+                        "À vous de le découvrir en participant à notre prochaine soirée repas du HBC Fillière !",
+                        "Service assuré par les licenciés de plus de 16 ans supervisés par les séniors, un DJ pour assurer la deuxième partie de la soirée… Et chaque année de nombreux lots à gagner lors de notre tombola !",
+                        "Suivez nous sur les réseaux afin de ne pas rater la date… et cochez la sur votre agenda dès qu’elle sera révélée !"
+                    ],
+                    "images": [
+                        {
+                            "link": "../../../assets/images/events/banniere-soiree-du-hand.webp",
+                            "alt" : "soiree_hp"
+                        }
+                    ],
+                    "citation": {
+                        "text": "Nulle table ne peut remplacer le partage d’un repas simple orné d’une touche d’amour et d’amitié.",
+                        "auteur": "Martine Chaudey"
+                    }
+                    
+                }
+            } 
+        },
+        {
+            "id": 3,
+            "name": "Parmel'Hand",
+            "picture": "../../../assets/images/events/hbcf-parmelhand.jpg",
+            "details": {
+                "catchphrase": "Un thème chaque année, un repas assorti, des bénévoles pour vous servir et une soirée dansante...",
+                "content": {
+                    "title": "C'est notre traditionnelle soirée repas",
+                    "content": [
+                        "Tartiflette lors de la soirée Tartiflette lors de la soirée « Les Bronzés font du ski », Choucroute lors de la soirée alsacienne… Quel sera notre prochain thème ?",
+                        "À vous de le découvrir en participant à notre prochaine soirée repas du HBC Fillière !",
+                        "Service assuré par les licenciés de plus de 16 ans supervisés par les séniors, un DJ pour assurer la deuxième partie de la soirée… Et chaque année de nombreux lots à gagner lors de notre tombola !",
+                        "Suivez nous sur les réseaux afin de ne pas rater la date… et cochez la sur votre agenda dès qu’elle sera révélée !"
+                    ],
+                    "images": [
+                        {
+                            "link": "../../../assets/images/events/banniere-soiree-du-hand.webp",
+                            "alt" : "soiree_hp"
+                        }
+                    ],
+                    "citation": {
+                        "text": "Nulle table ne peut remplacer le partage d’un repas simple orné d’une touche d’amour et d’amitié.",
+                        "auteur": "Martine Chaudey"
+                    }
+                    
+                }
+            }
+        }
+    ],
+    "club": {
+        "history": {
+            "title": "Historique",
+            "content": {
+                "title": "Nous, c'est la Fillière",
+                "content": [
+                    "Ce n'est pas la peine de nous chercher sur une carte, tu trouveras seulement un groupement de communes dont celle de notre lieu de pratique ne fait même pas partie.",
+                    "Nous, notre nom, il vient d'une petite rivière qui traverse 9 communes que notre club regroupe... En 1986, nous avons posé nos valises au gymnase du Parmelan à Groisy, qui porte le nom d'une jolie montagne de chez nous !",
+                    "Et depuis, notre objectif c'est de permettre à nos licenciés de pratiquer leur passion dans les meilleures conditions. Et pour nous, les meilleures conditions sont la convivialité et l'ambiance familiale qui règne chez nous ! Mais le plus important c'est le respect.",
+                    "Et c'est de là  que nous vient notre devise :  « Le respect c'est déjà une victoire » ! Eh non, pour nous, ce n'est pas une simple excuse pour les défaites, c'est une véritable valeur depuis nos débuts.",
+                    "Nous formons une vraie famille violette, et nous accueillons avec plaisir tous ceu qui veulents la rejoindre, alors n'hésitez pas !"
+                ],
+                "image": [
+                    {
+                        "link": "../../../assets/images/club/logos/ancien_logo_hbcf.webp",
+                        "alt": "De 1986 à 2008, notre logo fût celui-ci.."
+                    },
+                    {
+                        "link": "../../../assets/images/club/logos/logo_moins ancien_hbcf.webp",
+                        "alt": "En 2008, il se refait une beauté"
+                    },
+                    {
+                        "link": "../../../assets/images/club/logos/logo_hbcf.png",
+                        "alt": "Avant de subir un relooking et devenir celui-là ! Glow up vous ne trouvez pas ?"
+                    }
+                ],
+                "citation": {
+                    "text": "Le respect c'est déjà une victoire.",
+                    "auteur": "Devise du HBC Fillière"
+                }
+            }
+        },
+"numbers": {
+            "title": "Chiffres clés",
+            "numbers": [
+                {
+                    "data": "326",
+                    "description": "Licenciés lors de la saison 2023/2024"
+                },
+                {
+                    "data": "11",
+                    "description": "Équipes engagées lors de la saison 2024/2025"       
+                },
+                {
+                    "data": "35",
+                    "description": "Entraineurs bénévoles lors de la saison 2023/2024"
+                },
+                {
+                    "data": "100%",
+                    "description": "De joueurs satisfaits"
+                }
+            ]
+        },
+        "location": {
+            "title": "Où nous trouver ?",
+            "content": {
+                "parts": [
+                    {
+                        "title" : "Deux accès possibles :",
+                        "entries" : [
+                            {
+                                "name" : "Sortie autoroute « Annecy Nord »",
+                                "text" : "Prendre la N203 en direction de la Roche-sur-Foron sur une douzaine de kilomètres. A Groisy « Le Plot », prendre à gauche, direction le Chef-Lieu sur environ 2 kilomètres. Une fois au Collège du Parmelan prendre la première à gauche. Le Gymnase est à 150 mètres."
+                            },
+                            {
+                                "name" : "Sortie autoroute « Cruseilles »",
+                                "text" : "Aux feux, traverser la nationale 201, continuer en direction de Groisy (environ 5 kms). Après le passage à niveau, continuer sur environ 800 m et au niveau du collège du Parmelan tourner à droite. Le Gymnase est à 150 mètres."
+                            }
+                        ]
+                    },
+                    {
+                        "title" : "Lieu de rencontre",
+                        "location" : "Gymnase du Parmelan <br/> 321 route de Lecy <br/> 75470 Groisy"
+                    }
+                ]
+            }
+        }
+    }
+    ,
+    "partners": {
+        "actual_partners": {
+            "title": "Nos partenaires",
+            "partners_list": [
+                {
+                    "name": "VF Enseigne",
+                    "logo": "../../../assets/images/partners/vf-enseignre.png",
+                    "link": "https://www.vf-enseigne.fr"
+                },                {
+                    "name": "Le petit casino Thorens-Glière",
+                    "logo": "../../../assets/images/partners/le-petit-casino.png"
+                },
+                {
+                    "name": "Duret Didier et Fils",
+                    "logo": "../../../assets/images/partners/duret-didier.png"
+                },
+                {
+                    "name": "Didier Tissot arboriculteur",
+                    "logo": "../../../assets/images/partners/didier-tissot.png",
+                    "link": "https://www.vergerstissot.fr"
+                },
+                {
+                    "name": "Teamsport 2000",
+                    "logo": "../../../assets/images/partners/sport-2000.png",
+                    "link": "https://www.sport2000.fr/magasins/fiche/741322-sport-2000-amancy"
+                },
+                {
+                    "name": "ACB Group",
+                    "logo": "../../../assets/images/partners/acb-1.png",
+                    "link": "https://www.acb-groupe.fr"
+                },
+                {
+                    "name": "Agencement Menuiserie Dumas",
+                    "logo": "../../../assets/images/partners/amd.png"
+                },
+                {
+                    "name": "Annecy Auto Service",
+                    "logo": "../../../assets/images/partners/annecy-auto-service.png"
+                },
+                {
+                    "name": "Annecy Thermolaquage",
+                    "logo": "../../../assets/images/partners/annecy-thermolaquage.png"
+                }
+            ]
+        },
+        "become_partner": {
+            "title": "Devenir partenaire",
+            "description": "Et si nous entrions en contact ?",
+            "content": [
+                "Parce que depuis ses débuts, le Handball Club de la Fillière n’existe que par ses bénévoles, ses licenciés, ses dirigeants mais aussi et surtout… ses partenaires.",
+                "Chaque année, notre commission Partenaires se démène pour trouver des sponsors locaux afin de financer les activités du club et assurer son bon fonctionnement pour que chacun de nos licenciés puisse prendre du plaisir sur nos terrains… Pourquoi cette année, vous ne feriez pas partie de l’aventure ?",
+                "Vous êtes une entreprise ?",
+                "N’hésitez pas à entrer en contact avec nous par le biais d’un petit mot, d’un mail, d’un message sur les réseaux, par pigeon voyageur… en nous laissant vos coordonnées pour que nous puissions vous présenter une proposition de partenariat qui VOUS correspond !",
+                "De la visibilité, des avantages, des invitations à nos évènements… vous  n’allez tout de même pas passer à côté de cette opportunité d’agrandir votre réseau tout en aidant un petit club local ?",
+                "Vous êtes un particulier ?",
+                "Parce que même les grands fan peuvent nous aider à continuer d’exercer notre passion dans la sérénité ! Laissez-nous vos coordonnées et nous vous recontacterons rapidement !"
+
+            ],
+            "contact": {
+                "email": "partenariat@hbcfilliere.fr"
+            },
+            "networks": [
+                {
+                    "name": "Facebook",
+                    "link": "https://www.facebook.com/handballclublafilliere/"
+                },
+                {
+                    "name": "Instagram",
+                    "link": "https://www.instagram.com/hbc_lafilliere/?hl=fr"
+                }
+            ]
+        }
+    },
+    "gallery": {
+        "title": "Galerie",
+        "photos": [
+            {
+                "name": "2024 - AGH - SF1 (PN)",
+                "image": "../../../assets/images/gallery/2024-agh-sf1(pn).jpg",
+                "link": "https://drive.google.com/drive/folders/1aKgFzLaMBYTY31RyVnUVAQLLARWljg_2?usp=drive_link"
+            },
+            {
+                "name": "Cross du cœur - 20.04.2024", 
+                "image": "../../../assets/images/gallery/cross_du_coeur.jpg",
+                "link": "https://drive.google.com/drive/folders/1xxCNn78gBOhvbPNoM5CG8ya-0I6fl4MA?usp=drive_link"
+            },
+            {
+                "name": "2023 - HBCF SF - Guilherand",
+                "image": "../../../assets/images/gallery/2023-hbcfsf-guilherand.jpg",
+                "link": "https://drive.google.com/drive/folders/1sLJCidTuvORZuV5b9aDeQsEg-BeG5-g8?usp=sharing"
+            },
+            {
+                "name": "2023 - HBCF 18G - Evian",
+                "image": "../../../assets/images/gallery/2023-hbcf18g-evian.jpg",
+                "link": "https://drive.google.com/drive/folders/19GGufNoRy7UNPG5PAxkUVrg7H9IVJ6ct?usp=sharing"
+            },
+            {
+                "name": "2023 - Partenaires",
+                "image": "../../../assets/images/gallery/2023-partners.jpeg",
+                "link": "https://drive.google.com/drive/folders/1IycpdHyBSxX9eq8kSJMxSUDJJF-PoJH-?usp=sharing"
+            },
+            {
+                "name": "Parmel'hand 2023",
+                "image": "../../../assets/images/gallery/parmelhand-2023.jpeg",
+                "link": "https://drive.google.com/drive/folders/1SSFfK5s3xR-SqY8UaYCQymBuHyPzZ1jm?usp=sharing"
+            },
+            {
+                "name": "HBCF - 18G - Sallanches",
+                "image": "../../../assets/images/gallery/hbcf-18g-sallanches.jpg",
+                "link": "https://drive.google.com/drive/folders/1TutiSpir1FTDvA-34R07ebYlqRHDSZ_7?usp=sharing"
+            },
+            {
+                "name": "2023 - Soirée Repas Médiévales",
+                "image": "../../../assets/images/gallery/soiree-repas-medievales-2023.jpg",
+                "link": "https://photos.app.goo.gl/1iw3PFLAwRt4adTFA"
+            },
+            {
+                "name": "Saison 2022/2023",
+                "image": "../../../assets/images/gallery/saison-2022-2023.jpg",
+                "link": "https://photos.app.goo.gl/SdbrctePS9vAocur5"
+            },
+            {
+                "name": "2022 - Diaporama 35 ans du club",
+                "image": "../../../assets/images/gallery/2022-diaporama-35-ans-du-club.jpg",
+                "link": "https://photos.app.goo.gl/USHGdnNpQFayFh1t6"
+            },
+            {
+                "name": "2022 - Soirée Far West",
+                "image": "../../../assets/images/gallery/2022-soiree-far-west.jpg",
+                "link": "https://photos.app.goo.gl/FNrs7EQpqL1if9wTA"
+            },
+            {
+                "name": "SF2 - HBC Fillière 23 - 25 Bourgetain",
+                "image": "../../../assets/images/gallery/SF2-bourgetain.jpg",
+                "link": "https://photos.app.goo.gl/p5dZ63xxJxe2GyEL6"
+            },
+            {
+                "name": "SF1 HBC Fillière 30 - 26 CSAV Handball",
+                "image": "../../../assets/images/gallery/SF1-CSAV.jpg",
+                "link": "https://photos.app.goo.gl/rvndM9UnoHb9zznt6"
+            },
+            {
+                "name": "Parmel'hand 2022",
+                "image": "../../../assets/images/gallery/parmelhand-2022.jpg",
+                "link": "https://photos.app.goo.gl/v8iDAWfyriYfiwTy7"
+            },
+            {
+                "name": "Saison 2021/2022 - National 3 Féminine",
+                "image": "../../../assets/images/gallery/saison-2021-2022-n3.jpg",
+                "link": "https://photos.app.goo.gl/ZFp7UwAJgrw42rhA7"
+            },
+            {
+                "name": "2021 - Stage de Juillet",
+                "image": "../../../assets/images/gallery/hbcf-stage-juillet-2021.jpg",
+                "link": "https://drive.google.com/drive/folders/1bKvuq6MliWLh5F_KJPXOmVF6kCPiK9cP?usp=sharing"
+            },
+            {
+                "name": "2021 - Stage d'Août",
+                "image": "../../../assets/images/gallery/hbcf-stage-aout-2021.jpg",
+                "link": "https://drive.google.com/drive/folders/1H3Pxqa7OrVAhSAuI1yf40Fn6jNQvekfK?usp=sharing"
+            },
+            {
+                "name": "2021 - SF2 vs Montmélihand",
+                "image": "../../../assets/images/gallery/hbcf-sf2-vs-montmelihand-2021.jpg",
+                "link": "https://drive.google.com/drive/folders/15zyVgMB5RhCI463b86--7ylFotQzpZWH?usp=sharing"
+            },
+            {
+                "name": "2021 - SF1 vs Annecy/Sallanches",
+                "image": "../../../assets/images/gallery/hbcf-sf1-vs-annecysallanches-2021.jpg",
+                "link": "https://drive.google.com/drive/folders/1xIiWDcFETATRMRqCKBmxpVonNI8B_Chh?usp=sharing"
+            },
+            {
+                "name": "2021 - CSAV vs N3 Féminine",
+                "image": "../../../assets/images/gallery/2021-csav-n3-3.jpg",
+                "link": "https://photos.app.goo.gl/jqJ7yQCjcbSYvQVG9"
+            },
+            {
+                "name": "2020 - Soirée Repas - Les Bronzés",
+                "image": "../../../assets/images/gallery/2020-soiree-les-bronze.jpg",
+                "link": "https://photos.app.goo.gl/YirnWb3RLsTVtfxS8"
+            },
+            {
+                "name": "Photos individuelles 2020-2021",
+                "image": "../../../assets/images/gallery/2023-hbcfsf-guilherand.jpg",
+                "link": "https://photos.app.goo.gl/x71XqjC3nP5VGRb9A"
+            },
+            {
+                "name": "2021 - Parmel'hand",
+                "image": "../../../assets/images/gallery/2021-parmelhand.jpg",
+                "link": "https://photos.app.goo.gl/aiZ2zMZry8zc95zv7"
+            },
+            {
+                "name": "2019 - Moins 13G vs Aix les bains",
+                "image": "../../../assets/images/gallery/2019-13g-aix-les-bains.webp",
+                "link": "https://photos.app.goo.gl/rMHd5Rx1YGB5v3737"
+            },
+            {
+                "name": "2019 - SG1 vs Bourg en bresse",
+                "image": "../../../assets/images/gallery/2019-sg1-bourg-en-bresse.jpg",
+                "link": "https://photos.app.goo.gl/cL6iXkVFh439XCP49"
+            },
+            {
+                "name": "2019 - Match SF1 vs Porte de l'Isère",
+                "image": "../../../assets/images/gallery/2019-sf1-porte-isere.webp",
+                "link": "https://photos.app.goo.gl/YRNFWENxiSYLscDQ6"
+            },
+            {
+                "name": "2019 - Moins 18F vs CSAV",
+                "image": "../../../assets/images/gallery/18f-hbcf-csav-2019.webp",
+                "link": "https://photos.app.goo.gl/43wNeaLDwhWsqFHm6"
+            },
+            {
+                "name": "2019 - Tournoi Parmel'hand Loisirs et Jeunes",
+                "image": "../../../assets/images/gallery/2019-parmelhand.jpg",
+                "link": "https://photos.app.goo.gl/yvdrtip2sxUEXcHj7"
+            }
+        ]
+    },
+    "news": {
+        "title": "Actualités",
+        "news": [
+            {
+                "id": "1",
+                "title": "Une vente caritative qui nous tient à coeur...",
+                "summary": "À l’image de ce que nous avions entrepris il y a 3 ans, nous relançons cette année notre vente caritative de t-shirts pour deux causes qui nous tiennent particulièrement à cœur : la lutte contre le cancer du sein et la lutte contre les cancers masculins.",
+                "content": [
+                    "À l’image de ce que nous avions entrepris il y a 3 ans, nous relançons cette année notre vente caritative de t-shirts pour deux causes qui nous tiennent particulièrement à cœur : la lutte contre le cancer du sein et la lutte contre les cancers masculins.",
+                    "À l’aube du mois d’Octobre (rose), symbolisant le début d’un mois de mobilisation collective autour de la lutte contre le cancer du sein, nous avons déjà récolté 225€ au profit d’Octobre rose ainsi que 115€ au profit de Movember.",
+                    "Mais la mobilisation ne s’arrête pas là ! Nous vous proposons de nous aider à dépasser toutes nos attentes et aller encore plus loin en étoffant votre garde-robe tout en faisant une bonne action. Dans notre boutique caritative, deux options s’offrent à vous :",
+                    "<ul><li>Le t-shirt Octobre Rose uniquement pour un prix de 15€ (10€ de matière première et 5€ reversés à l’association en faveur de la lutte contre le cancer du sein)</li><li>Le pack Octobre Rose et Movember pour un prix de 28€ (18€ de matière première et 5€ reversés à l’association en faveur de la lutte contre le cancer du sein + 5€ reversés à l’association en faveur de la lutte contre les cancers masculins).</li></ul>",
+                    "Ensemble accomplissons de grandes choses. Rendez-vous sur notre boutique en ligne, cliquez ici",
+                    "La prochaine commande sera passée le dimanche 8 octobre à 21h00.",
+                    "T-shirt Movember uniquement disponible à partir du 9 octobre"
+                ],
+                "images": [
+                    "../../../assets/images/news/vente_t-shirts.webp"
+                ],
+                "publishDate": "2024-09-29",
+                "author": "Handball Club de la Fillière",
+                "likes": 0
+            },
+            {
+                "id": "2",
+                "title": "Une vente caritative qui nous tient à coeur...",
+                "summary": "À l’image de ce que nous avions entrepris il y a 3 ans, nous relançons cette année notre vente caritative de t-shirts pour deux causes qui nous tiennent particulièrement à cœur : la lutte contre le cancer du sein et la lutte contre les cancers masculins.",
+                "content": [
+                ],
+                "images": [
+                    "../../../assets/images/news/vente_t-shirts.webp"
+                ],
+                "publishDate": "2024-10-25",
+                "author": "Handball Club de la Fillière",
+                "likes": 0
+            },
+            {
+                "id": "3",
+                "title": "Une vente caritative qui nous tient à coeur...",
+                "summary": "À l’image de ce que nous avions entrepris il y a 3 ans, nous relançons cette année notre vente caritative de t-shirts pour deux causes qui nous tiennent particulièrement à cœur : la lutte contre le cancer du sein et la lutte contre les cancers masculins.",
+                "content": [
+                ],
+                "images": [
+                    "../../../assets/images/news/vente_t-shirts.webp"
+                ],
+                "publishDate": "2024-10-01",
+                "author": "Handball Club de la Fillière",
+                "likes": 0
+            }
+        ]
+    }
+    
+}

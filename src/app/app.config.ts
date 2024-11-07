@@ -1,5 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { provideZoneChangeDetection } from '@angular/core';
 
@@ -13,5 +13,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes), 
     provideClientHydration(),
     provideHttpClient(), provideAnimationsAsync(), provideAnimationsAsync(),
+    provideHttpClient(withFetch())
   ]
 };

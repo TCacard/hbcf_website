@@ -18,7 +18,7 @@ import { CommonModule } from '@angular/common';
 })
 export class EquipesComponent {
 
-  constructor(private router: RouterModule, private teamService: TeamsService, private dataService: DataService) {
+  constructor(private router: RouterModule, private teamService: TeamsService) {
 
   }
 
@@ -27,14 +27,17 @@ export class EquipesComponent {
   leader_teams: Team[] = []
 
   ngOnInit() {
-    this.dataService.getData().subscribe((data: any) => {
-      this.competition_teams = data.equipes.equipes_competition;
-      this.leader_teams = data.equipes.equipe_dirigeante
+    this.teamService.getCompetitionTeams().subscribe((data: any) => {
+      this.competition_teams = data
     });
-
+    this.teamService.getLeadingTeams().subscribe((data: any) => {
+      this.leader_teams = data
+    });
   }
+
+
   navigateToMatchCalendar() {
     // this.router.navigate(['/calendrier']);
-}
+  }
 
 }
