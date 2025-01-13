@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { GalleryService } from '../services/gallery.service';
 import { CommonModule } from '@angular/common';
+import { Gallery } from '../models/gallery';
 
 @Component({
   selector: 'app-galerie',
@@ -19,9 +20,9 @@ export class GalerieComponent {
   constructor(private galleryService: GalleryService) {}
 
   ngOnInit(): void {
-    this.galleryService.getGalleryData().subscribe((data: any) => {
-      this.galleryName = data.title;
-      this.photos = data.photos;
+    this.galleryService.getGalleryData().subscribe((gallery: Gallery) => {
+      this.galleryName = gallery.title;
+      this.photos = gallery.pictures;
       this.getRandomPhotos();
     });
   }

@@ -1,0 +1,89 @@
+<div class="create-account-container">
+    <h1 class="title text">Créer un compte</h1>
+  
+    <form (submit)="createAccount()" novalidate>
+
+      <div class="form-row">
+        <!-- Champ Prénom -->
+        <div class="form-group col">
+          <input
+        type="text"
+        id="firstName"
+        [(ngModel)]="firstName"
+        name="firstName"
+        class="form-control floating-input"
+        required
+        placeholder=" "
+          />
+          <label for="firstName" class="floating-label">Prénom</label>
+        </div>
+
+        <!-- Champ Nom -->
+        <div class="form-group col">
+          <input
+        type="text"
+        id="lastName"
+        [(ngModel)]="lastName"
+        name="lastName"
+        class="form-control floating-input"
+        required
+        placeholder=" "
+          />
+          <label for="lastName" class="floating-label">Nom</label>
+        </div>
+      </div>
+      <!-- Champ Email -->
+      <div class="form-group">
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="email"
+          name="email"
+          class="form-control floating-input"
+          required
+          placeholder=" "
+        />
+        <label for="email" class="floating-label">Email</label>
+      </div>
+  
+      <!-- Champ Mot de passe -->
+      <div class="form-group">
+        <input
+          type="password"
+          id="password"
+          [(ngModel)]="password"
+          name="password"
+          class="form-control floating-input"
+          required
+          placeholder=" "
+        />
+        <label for="password" class="floating-label">Mot de passe</label>
+      </div>
+  
+      <!-- Champ Confirmation de mot de passe -->
+      <div class="form-group">
+        <input
+          type="password"
+          id="confirmPassword"
+          [(ngModel)]="confirmPassword"
+          name="confirmPassword"
+          class="form-control floating-input"
+          required
+          placeholder=" "
+        />
+        <label for="confirmPassword" class="floating-label">Confirmer le mot de passe</label>
+      </div>
+  
+      <!-- Message d'erreur -->
+      <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+  
+      <!-- Bouton Créer un compte -->
+      <button type="submit" class="btn btn-primary">Créer un compte</button>
+    </form>
+  
+    <!-- Lien vers la page de connexion -->
+    <p class="login-link">
+      Vous avez déjà un compte ? <a href="http://localhost:4200/login" class="link">Se connecter</a>
+    </p>
+  </div>
+  

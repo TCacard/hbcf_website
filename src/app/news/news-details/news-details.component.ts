@@ -3,6 +3,7 @@ import { NewsService } from '../../services/news.service';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { NewItem } from '../../models/news';
 
 @Component({
   selector: 'app-news-details',
@@ -20,9 +21,8 @@ export class NewsDetailsComponent implements OnInit {
   constructor(private newsService: NewsService, private route: ActivatedRoute, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
-    let id = this.route.snapshot.params['id'];
-    this.newsService.getNewsById(id).subscribe((data: any) => {
-      this.news = data;
+    this.newsService.getNewsById(this.route.snapshot.params['id']).subscribe((newItem: NewItem) => {
+      this.news = newItem;
     });
   }
 

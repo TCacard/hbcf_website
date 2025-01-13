@@ -1,0 +1,163 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+}
+
+.inscription-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #CFBCDB;
+    color: #6B5678;
+    width: 80%;
+}
+
+.pre-title {
+    color: #6B5678;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.text {
+    color: #6B5678;
+}
+
+.title {
+    text-shadow: 4px 4px 4px #6B5678;
+    font-size: 36px; /* Taille du titre augmentée */
+}
+
+.part-title {
+    font: 26px 'Alegreya Sans' !important;
+    color: #A519FE;
+}
+
+.part-div {
+    width: 100%;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.div-cell {
+    display: flex;
+    flex-direction: column;
+    margin: 1% 3%;
+}
+
+.tr {
+    display: flex;
+    width: 100%;
+}
+
+.th {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #6B5678;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+  
+  caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  thead,
+  tfoot {
+    background-color: #CFBCDB;
+  }
+  
+  th,
+  td {
+    border: 1px solid #6B5678;
+    padding: 8px 10px;
+  }
+  
+  td:last-of-type {
+    text-align: center;
+  }
+  
+  tbody > tr:nth-of-type(even) {
+    background-color: #CFBCDB;
+  }
+  
+  tfoot th {
+    text-align: right;
+  }
+  
+  tfoot td {
+    font-weight: bold;
+  }
+
+  .warning {
+    display: flex;
+    color: red;
+    justify-content: center;
+  }
+
+  button {
+    display: block;
+    margin: 20px auto; /* Centrage du bouton */
+    padding: 12px 25px;
+    background-color: #6B5678; /* Couleur de fond identique au texte */
+    color: #CFBCDB; /* Couleur du texte dans le bouton */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Augmentation de la taille du texte du bouton */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5A466A; /* Couleur légèrement différente au survol */
+}
+
+button:active {
+    background-color: #4E3D5F; /* Couleur plus foncée lors du clic */
+}
+
+.contact-part {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.contact-data {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-field {
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #A519FE;
+  font-weight: bold;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-img {
+  width: 5%;
+  height: auto;
+}

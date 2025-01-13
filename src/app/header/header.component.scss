@@ -1,61 +1,84 @@
 .toolbar {
   background-color: #CFBCDB;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // padding: 0 16px;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // z-index: 1000;
 }
 
-.spacer {
+.logo-btn {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  // align-items: center;
 }
 
-
-.burger-icon {
-  display: none;
-  color: #6B5678;
+.logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
 }
 
-.citation {
-  display: none;
-  color: #6B5678;
-  font-family: 'Alegreya Sans';
-  font-weight: bold;
+/* Navigation centrale */
+.nav-center {
+  display: flex;
+  // justify-content: center;
+  // flex-grow: 1;
 }
 
-
+.btn_menu {
+  background-color: #CFBCDB;
+  // border: none;
+  // color: #6B5678 !important;
+  // font-weight: bold;
+  // font-family: 'Alegreya Sans';
+  // font-size: 15pt;
+  // cursor: pointer;
+  // border-radius: 7%;
+  // padding: 6px 10px;
+  // margin: 0 5px;
+  // text-align: center;
+}
 
 .active-btn {
   background-color: rgba(107, 86, 120, 0.19) !important;
 }
 
-.btn_menu {
-  background-color: #CFBCDB;
-  border: none;
-  color: #6B5678 !important;
-  font-weight: bold;
-  font-family: 'Alegreya Sans';
-  font-size: 15pt;
-  cursor: pointer;
-  border-radius: 7%;
-  padding: 6px 10px;
-  width: 100%;
+/* Icônes à droite */
+.nav-icons {
+  display: flex;
+  // align-items: center;
+  // gap: 10px;
 }
 
-.logo-btn {
-  padding: 0;
-  margin-right: 20px;
-  background-color: #CFBCDB;
-  border: none;
+.nav-icons mat-icon {
+  color: #6B5678;
+  // font-size: 24px;
 }
 
-.logo {
-  height: 55px;
-  width: auto;
-  cursor: pointer;
+.nav-icons p {
+  display: inline;
+  // margin: 0;
+  // padding-left: 5px;
+  // color: #6B5678;
+  // font-size: 12pt;
+  // font-family: 'Alegreya Sans';
+  // font-weight: bold;
+}
+
+/* Sous-menu */
+.sub-menu {
+  display: flex;
+  // justify-content: center;
+  // background-color: #CFBCDB !important;
 }
 
 .sub-item {
-  padding-left: 20px;
-  font-size: 9pt;
+  // padding-left: 20px;
+  // font-size: 9pt;
   color: #6B5678 !important;
 }
 
@@ -63,54 +86,93 @@
   background-color: #CFBCDB !important;
 }
 
-.disabled {
-  color: gray !important;
-  cursor: not-allowed !important;
+::ng-deep .mat-mdc-menu-panel {
+  background-color: #CFBCDB !important;
 }
 
+::ng-deep .mat-mdc-menu-item, .mat-mdc-menu-item:visited, .mat-mdc-menu-item:link {
+  color: #6B5678 !important;
+}
 
-.toolbar {
+::ng-deep .mdc-button {
+  justify-content: flex-start !important;
+}
+
+.user-info {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // align-items: center;
+  // gap: 10px;
+  // padding: 10px;
+  // background-color: rgba(107, 86, 120, 0.1); /* Fond subtil */
+  // font-size: 16px;
+  // font-weight: bold;
+  // color: #6B5678;
+  // border-bottom: 1px solid #CFBCDB; /* Ligne séparatrice */
 }
 
-.logo-btn {
-  img {
-    height: 40px;
-  }
-}
 
-.desktop-menu {
-  display: flex;
-  align-items: center;
-}
+// score n co
 
-.spacer {
-  flex: 1;
-}
-
-.burger-menu {
-  display: flex;
-  flex-direction: column;
-  background-color: #CFBCDB;
-  padding: 1rem;
-}
+/* Responsive design */
 @media (max-width: 1035px) {
-  .desktop-menu {
+  .toolbar {
+    background-color: transparent;
+  }
+
+  .nav-center {
+    display: none; /* Cache la navigation centrale sur les petits écrans */
+  }
+
+  .hide-on-small-screens {
     display: none;
   }
 
   .burger-icon {
     display: block;
+    color: #6B5678;
   }
 
-  .citation {
-    display: block;
+  .burger-menu {
+    height: 0%;
+    transition: height 5s ease-in-out;
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #CFBCDB;
+    padding: 1rem;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    width: 95%;
+    height: 100%;
+    z-index: 100;
+    transition: height 5s ease-in-out;
+    visibility: visible;
+  }
+
+  .burger-menu button {
+    width: 100%;
   }
 }
 
-.sub-menu {
-  display: flex;
-  justify-content: center;
+@media (min-width: 1035px) {
+  .burger-menu {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 599px) {
+  .logo {
+    height: 40px;
+  }
+
+  .btn_menu {
+    font-size: 12pt;
+  }
+
+  .nav-icons p {
+    font-size: 10pt;
+  }
 }

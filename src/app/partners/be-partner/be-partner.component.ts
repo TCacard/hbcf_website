@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PartnersService } from '../../services/partners.service';
 import { CommonModule } from '@angular/common';
+import { ContactItem } from '../../models/contact';
 
 @Component({
   selector: 'app-be-partner',
@@ -23,4 +24,7 @@ export class BePartnerComponent implements OnInit {
     });
   }
 
+  getMailContact(contact: ContactItem[]): ContactItem {
+    return contact?.find(c => c.name === 'Email')!;
+  }
 }

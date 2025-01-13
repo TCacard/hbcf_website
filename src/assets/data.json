@@ -490,6 +490,7 @@
                 }
             ]
         },
+        
         "become_partner": {
             "title": "Devenir partenaire",
             "description": "Et si nous entrions en contact ?",
@@ -529,137 +530,164 @@
             {
                 "name": "Cross du cœur - 20.04.2024", 
                 "image": "./assets/images/gallery/cross_du_coeur.jpg",
-                "link": "https://drive.google.com/drive/folders/1xxCNn78gBOhvbPNoM5CG8ya-0I6fl4MA?usp=drive_link"
+                "link": "https://drive.google.com/drive/folders/1xxCNn78gBOhvbPNoM5CG8ya-0I6fl4MA?usp=drive_link",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2023 - HBCF SF - Guilherand",
                 "image": "./assets/images/gallery/2023-hbcfsf-guilherand.jpg",
-                "link": "https://drive.google.com/drive/folders/1sLJCidTuvORZuV5b9aDeQsEg-BeG5-g8?usp=sharing"
+                "link": "https://drive.google.com/drive/folders/1sLJCidTuvORZuV5b9aDeQsEg-BeG5-g8?usp=sharing",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2023 - HBCF 18G - Evian",
                 "image": "./assets/images/gallery/2023-hbcf18g-evian.jpg",
-                "link": "https://drive.google.com/drive/folders/19GGufNoRy7UNPG5PAxkUVrg7H9IVJ6ct?usp=sharing"
+                "link": "https://drive.google.com/drive/folders/19GGufNoRy7UNPG5PAxkUVrg7H9IVJ6ct?usp=sharing",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2023 - Partenaires",
                 "image": "./assets/images/gallery/2023-partners.jpeg",
-                "link": "https://drive.google.com/drive/folders/1IycpdHyBSxX9eq8kSJMxSUDJJF-PoJH-?usp=sharing"
+                "link": "https://drive.google.com/drive/folders/1IycpdHyBSxX9eq8kSJMxSUDJJF-PoJH-?usp=sharing",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "Parmel'hand 2023",
                 "image": "./assets/images/gallery/parmelhand-2023.jpeg",
-                "link": "https://drive.google.com/drive/folders/1SSFfK5s3xR-SqY8UaYCQymBuHyPzZ1jm?usp=sharing"
+                "link": "https://drive.google.com/drive/folders/1SSFfK5s3xR-SqY8UaYCQymBuHyPzZ1jm?usp=sharing",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "HBCF - 18G - Sallanches",
                 "image": "./assets/images/gallery/hbcf-18g-sallanches.jpg",
-                "link": "https://drive.google.com/drive/folders/1TutiSpir1FTDvA-34R07ebYlqRHDSZ_7?usp=sharing"
+                "link": "https://drive.google.com/drive/folders/1TutiSpir1FTDvA-34R07ebYlqRHDSZ_7?usp=sharing",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2023 - Soirée Repas Médiévales",
                 "image": "./assets/images/gallery/soiree-repas-medievales-2023.jpg",
-                "link": "https://photos.app.goo.gl/1iw3PFLAwRt4adTFA"
+                "link": "https://photos.app.goo.gl/1iw3PFLAwRt4adTFA",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "Saison 2022/2023",
                 "image": "./assets/images/gallery/saison-2022-2023.jpg",
-                "link": "https://photos.app.goo.gl/SdbrctePS9vAocur5"
+                "link": "https://photos.app.goo.gl/SdbrctePS9vAocur5",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2022 - Diaporama 35 ans du club",
                 "image": "./assets/images/gallery/2022-diaporama-35-ans-du-club.jpg",
-                "link": "https://photos.app.goo.gl/USHGdnNpQFayFh1t6"
+                "link": "https://photos.app.goo.gl/USHGdnNpQFayFh1t6",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2022 - Soirée Far West",
                 "image": "./assets/images/gallery/2022-soiree-far-west.jpg",
-                "link": "https://photos.app.goo.gl/FNrs7EQpqL1if9wTA"
+                "link": "https://photos.app.goo.gl/FNrs7EQpqL1if9wTA",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "SF2 - HBC Fillière 23 - 25 Bourgetain",
                 "image": "./assets/images/gallery/SF2-bourgetain.jpg",
-                "link": "https://photos.app.goo.gl/p5dZ63xxJxe2GyEL6"
+                "link": "https://photos.app.goo.gl/p5dZ63xxJxe2GyEL6",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "SF1 HBC Fillière 30 - 26 CSAV Handball",
                 "image": "./assets/images/gallery/SF1-CSAV.jpg",
-                "link": "https://photos.app.goo.gl/rvndM9UnoHb9zznt6"
+                "link": "https://photos.app.goo.gl/rvndM9UnoHb9zznt6",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "Parmel'hand 2022",
                 "image": "./assets/images/gallery/parmelhand-2022.jpg",
-                "link": "https://photos.app.goo.gl/v8iDAWfyriYfiwTy7"
+                "link": "https://photos.app.goo.gl/v8iDAWfyriYfiwTy7",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "Saison 2021/2022 - National 3 Féminine",
                 "image": "./assets/images/gallery/saison-2021-2022-n3.jpg",
-                "link": "https://photos.app.goo.gl/ZFp7UwAJgrw42rhA7"
+                "link": "https://photos.app.goo.gl/ZFp7UwAJgrw42rhA7",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2021 - Stage de Juillet",
                 "image": "./assets/images/gallery/hbcf-stage-juillet-2021.jpg",
-                "link": "https://drive.google.com/drive/folders/1bKvuq6MliWLh5F_KJPXOmVF6kCPiK9cP?usp=sharing"
+                "link": "https://drive.google.com/drive/folders/1bKvuq6MliWLh5F_KJPXOmVF6kCPiK9cP?usp=sharing",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2021 - Stage d'Août",
                 "image": "./assets/images/gallery/hbcf-stage-aout-2021.jpg",
-                "link": "https://drive.google.com/drive/folders/1H3Pxqa7OrVAhSAuI1yf40Fn6jNQvekfK?usp=sharing"
+                "link": "https://drive.google.com/drive/folders/1H3Pxqa7OrVAhSAuI1yf40Fn6jNQvekfK?usp=sharing",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2021 - SF2 vs Montmélihand",
                 "image": "./assets/images/gallery/hbcf-sf2-vs-montmelihand-2021.jpg",
-                "link": "https://drive.google.com/drive/folders/15zyVgMB5RhCI463b86--7ylFotQzpZWH?usp=sharing"
+                "link": "https://drive.google.com/drive/folders/15zyVgMB5RhCI463b86--7ylFotQzpZWH?usp=sharing",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2021 - SF1 vs Annecy/Sallanches",
                 "image": "./assets/images/gallery/hbcf-sf1-vs-annecysallanches-2021.jpg",
-                "link": "https://drive.google.com/drive/folders/1xIiWDcFETATRMRqCKBmxpVonNI8B_Chh?usp=sharing"
+                "link": "https://drive.google.com/drive/folders/1xIiWDcFETATRMRqCKBmxpVonNI8B_Chh?usp=sharing",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2021 - CSAV vs N3 Féminine",
                 "image": "./assets/images/gallery/2021-csav-n3-3.jpg",
-                "link": "https://photos.app.goo.gl/jqJ7yQCjcbSYvQVG9"
+                "link": "https://photos.app.goo.gl/jqJ7yQCjcbSYvQVG9",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2020 - Soirée Repas - Les Bronzés",
                 "image": "./assets/images/gallery/2020-soiree-les-bronze.jpg",
-                "link": "https://photos.app.goo.gl/YirnWb3RLsTVtfxS8"
+                "link": "https://photos.app.goo.gl/YirnWb3RLsTVtfxS8",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "Photos individuelles 2020-2021",
                 "image": "./assets/images/gallery/2023-hbcfsf-guilherand.jpg",
-                "link": "https://photos.app.goo.gl/x71XqjC3nP5VGRb9A"
+                "link": "https://photos.app.goo.gl/x71XqjC3nP5VGRb9A",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2021 - Parmel'hand",
                 "image": "./assets/images/gallery/2021-parmelhand.jpg",
-                "link": "https://photos.app.goo.gl/aiZ2zMZry8zc95zv7"
+                "link": "https://photos.app.goo.gl/aiZ2zMZry8zc95zv7",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2019 - Moins 13G vs Aix les bains",
                 "image": "./assets/images/gallery/2019-13g-aix-les-bains.webp",
-                "link": "https://photos.app.goo.gl/rMHd5Rx1YGB5v3737"
+                "link": "https://photos.app.goo.gl/rMHd5Rx1YGB5v3737",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2019 - SG1 vs Bourg en bresse",
                 "image": "./assets/images/gallery/2019-sg1-bourg-en-bresse.jpg",
-                "link": "https://photos.app.goo.gl/cL6iXkVFh439XCP49"
+                "link": "https://photos.app.goo.gl/cL6iXkVFh439XCP49",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2019 - Match SF1 vs Porte de l'Isère",
                 "image": "./assets/images/gallery/2019-sf1-porte-isere.webp",
-                "link": "https://photos.app.goo.gl/YRNFWENxiSYLscDQ6"
+                "link": "https://photos.app.goo.gl/YRNFWENxiSYLscDQ6",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2019 - Moins 18F vs CSAV",
                 "image": "./assets/images/gallery/18f-hbcf-csav-2019.webp",
-                "link": "https://photos.app.goo.gl/43wNeaLDwhWsqFHm6"
+                "link": "https://photos.app.goo.gl/43wNeaLDwhWsqFHm6",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             },
             {
                 "name": "2019 - Tournoi Parmel'hand Loisirs et Jeunes",
                 "image": "./assets/images/gallery/2019-parmelhand.jpg",
-                "link": "https://photos.app.goo.gl/yvdrtip2sxUEXcHj7"
+                "link": "https://photos.app.goo.gl/yvdrtip2sxUEXcHj7",
+                "gallery_id" : {"$oid": "67322277344bb67222e5b0b6"}
             }
         ]
     },

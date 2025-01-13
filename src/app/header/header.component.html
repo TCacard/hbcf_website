@@ -1,58 +1,77 @@
 <mat-toolbar color="primary" class="toolbar">
-
-  <!-- Logo bouton -->
+  <!-- Logo du site -->
   <button mat-button [routerLink]="'/accueil'" class="logo-btn">
     <img src="assets/images/logo_hbcf.png" alt="Logo HBCF" class="logo">
   </button>
 
-  <!-- Menu burger pour petits écrans -->
-  <button mat-icon-button (click)="toggleMenu()" class="burger-icon">
+  <button mat-icon-button class="burger-icon" (click)="toggleMenu()">
     <mat-icon>menu</mat-icon>
   </button>
 
-  <!-- Navigation normale pour grands écrans -->
-  <div class="spacer desktop-menu">
-    <ng-container *ngFor="let item of navItems; let i = index">
-      <ng-container *ngIf="item.subTitles && item.subTitles.length > 0; else noSubItems">
-        <!-- Menu déroulant pour sous-éléments -->
+  <!-- Navigation centrale -->
+  <div class="nav-center">
+    <ng-container *ngFor="let item of navigation.navItems">
+      <ng-container *ngIf="item.subTitles && item.subTitles.length > 0; else singleItem">
         <button mat-button [matMenuTriggerFor]="menu" class="btn_menu">{{ item.title }}</button>
-        <mat-menu #menu="matMenu" class="sub-menu"> 
+        <mat-menu #menu="matMenu" class="sub-menu">
           <button *ngFor="let subItem of item.subTitles" mat-menu-item [routerLink]="subItem.route"
-            routerLinkActive="active-btn">{{ subItem.title }}</button>
+            routerLinkActive="active-btn">
+            {{ subItem.title }}
+          </button>
         </mat-menu>
-
       </ng-container>
-
-      <!-- Si pas de sous-éléments -->
-      <ng-template #noSubItems>
-        <button mat-button class="btn_menu" [routerLink]="item.route"
-          [ngClass]="{ 'disabled': !item.route && (!item.subTitles || item.subTitles.length === 0) }"
-          routerLinkActive="active-btn">{{ item.title }}
+      <ng-template #singleItem>
+        <button mat-button class="btn_menu"
+          [routerLink]="item.route"
+          [ngClass]="{ 'disabled': !item.route }"
+          *ngIf="!item.picture"
+          routerLinkActive="active-btn">
+          {{ item.title }}
         </button>
       </ng-template>
     </ng-container>
   </div>
+
+  <!-- Icônes à droite -->
+  <div class="nav-icons hide-on-small-screens" *ngFor="let item of navigation.navItems">
+    <button mat-icon-button *ngIf="item.icon && item.route" [routerLink]="item.route">
+      <mat-icon>{{ item.icon }}</mat-icon>
+    </button>
+    <button mat-icon-button *ngIf="item.icon && item.link" (click)="NavigateToLink(item.link)">
+      <mat-icon>{{ item.icon }}</mat-icon>
+    </button>
+  </div>
+  <div class="nav-icons hide-on-small-screens" *ngIf="user">
+    <p>{{ user.firstName }}</p>
+  </div>  
+
+  
+  <div *ngIf="isMenuOpened" class="burger-menu">
+    <ng-container *ngFor="let item of navigation.navItems; let i = index">
+      <ng-container *ngIf="item.subTitles && item.subTitles.length > 0; else noSubItemsBurger">
+        <div class="burger-item">
+          <button mat-button class="btn_menu" (click)="toggleSubItems(i)">{{ item.title }}</button>
+          <div *ngIf="isSubItemsVisible[i]" class="sub-menu">
+            <button *ngFor="let subItem of item.subTitles" mat-button class="sub-item" [routerLink]="subItem.route"
+              routerLinkActive="active-btn" (click)="toggleMenu()">{{ subItem.title }}</button>
+          </div>
+        </div>
+      </ng-container>
+  
+      <ng-template #noSubItemsBurger>
+        <button mat-button class="btn_menu" [routerLink]="item.route" routerLinkActive="active-btn" (click)="toggleMenu()">{{ item.title }}</button>
+      </ng-template>
+    </ng-container>
+    <div class="user-info">
+      <mat-icon>person</mat-icon>
+      <span>{{ user.firstName }} {{ user.lastName }}</span>
+    </div>
+  </div>
 </mat-toolbar>
 
-<!-- Menu burger déroulant sur petit écran -->
-<div *ngIf="isMenuOpened" class="burger-menu">
-  <ng-container *ngFor="let item of navItems; let i = index">
-    <ng-container *ngIf="item.subTitles && item.subTitles.length > 0; else noSubItemsBurger">
-      <div class="burger-item">
-        <button mat-button class="btn_menu" (click)="toggleSubItems(i)">{{ item.title }}</button>
-        <div *ngIf="isSubItemsVisible[i]" class="sub-menu">
-          <button *ngFor="let subItem of item.subTitles" mat-button class="sub-item" [routerLink]="subItem.route"
-            routerLinkActive="active-btn">{{ subItem.title }}</button>
-        </div>
-      </div>
-    </ng-container>
 
-    <ng-template #noSubItemsBurger>
-      <button mat-button class="btn_menu" [routerLink]="item.route" routerLinkActive="active-btn">{{ item.title
-        }}</button>
-    </ng-template>
-  </ng-container>
-</div>
+
+<!-- Menu burger déroulant sur petit écran -->
 
 <!-- Contenu principal -->
 <router-outlet></router-outlet>

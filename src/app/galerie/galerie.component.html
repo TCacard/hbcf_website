@@ -4,9 +4,9 @@
         <div class="carousel-container">
             <div class="carousel-track" #track>
                 <div class="carousel-slide">
-                    <a [href]="randomPhotos[currentSlide].link" target="_blank" class="photo-link">
-                        <img [src]="randomPhotos[currentSlide].image" [alt]="randomPhotos[currentSlide].name" class="carousel-photo">
-                        <div class="photo-caption text">{{ randomPhotos[currentSlide].name }}</div>
+                    <a [href]="randomPhotos[currentSlide]?.link" target="_blank" class="photo-link">
+                        <img [src]="randomPhotos[currentSlide]?.image" [alt]="randomPhotos[currentSlide]?.name" class="carousel-photo">
+                        <div class="photo-caption text">{{ randomPhotos[currentSlide]?.name }}</div>
                     </a>
                 </div>
             </div>
@@ -23,7 +23,7 @@
     <div class="gallery-grid">
         <div class="gallery-item" *ngFor="let photo of photos">
             <div class="image-container" (click)="navigateToPhoto(photo.link)">
-                <img [src]="photo.image" [alt]="photo.name" class="grid-image">
+                <img [src]="photo?.image" [alt]="photo?.name" class="grid-image">
                 <div class="wave-overlay">
                     <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave">
                         <path d="M0,75 C150,150 350,0 500,100 L500,150 L0,150 Z"></path>

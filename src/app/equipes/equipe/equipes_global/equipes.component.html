@@ -17,23 +17,27 @@
             </ul>
         </div>    
     </div>
-    <button (click)="navigateToMatchCalendar()">Calendrier des matchs de l'année</button>
+    <button class="btn" (click)="navigateToMatchCalendar()">Calendrier des matchs de l'année</button>
     <h1 class="text title">Équipes compétitives</h1>
     <div class="equipes-content">
       <div *ngFor="let team of competition_teams" class="team-card">
-        <a [routerLink]="['/equipes', team.id]" class="team-image-wrapper">
-          <img [src]="team.image" [alt]="team.name" class="team-image">
+        <a [routerLink]="['/equipes', team._id]" class="team-image-wrapper">
+          <img [src]="team.picture" [alt]="team.name" class="team-image">
           <div class="team-button">{{ team.name }}</div>
         </a>
       </div>
+      <button *ngIf="authService.getUserRole() === 'admin'" mat-raised-button (click)="openDialog()" class="add-team-card">+</button>
+      
     </div>
     <h1 class="text title">Équipes Dirigeante</h1>
     <div class="equipes-content">
       <div *ngFor="let team of leader_teams" class="team-card">
-        <a [routerLink]="['/equipes', team.id]" class="team-image-wrapper">
-          <img [src]="team.image" [alt]="team.name" class="team-image">
+        <a [routerLink]="['/equipes', team._id]" class="team-image-wrapper">
+          <img [src]="team.picture" [alt]="team.name" class="team-image">
           <div class="team-button">{{ team.name }}</div>
         </a>
       </div>
+
+      <button *ngIf="authService.getUserRole() === 'admin'" mat-raised-button (click)="openDialog()" class="add-team-card">+</button>
     </div>
 </div>

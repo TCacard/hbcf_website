@@ -5,11 +5,11 @@
     <span class="author">{{news.author}}</span>
   </div>
   <div class="content">
-    <img *ngIf="news.images" [src]="news.images[0]" [alt]="news.title">
+    <img *ngIf="news.pictures" [src]="news.pictures[0].link" [alt]="news.title">
     <div *ngFor="let paragraph of news.content">
         <h3 *ngIf="paragraph.title">{{paragraph.title}}</h3>
         <ul *ngIf="paragraph.list_element">
-            <li *ngFor="let element of paragraph.list_element">{{element}}</li>
+            <li *ngFor="let element of paragraph.list_element">{{element.text}}</li>
         </ul>
         <div class="paragraph-content" *ngIf="paragraph.text && !paragraph.link && !paragraph.email">
             <p>{{paragraph.text}}</p>

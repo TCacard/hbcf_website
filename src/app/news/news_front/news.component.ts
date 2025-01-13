@@ -1,7 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../../services/news.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { News } from '../../models/news';
+import { MatDialog } from '@angular/material/dialog';
+import { AuthService } from '../../services/auth.service';
+import { ModalComponent } from '../../shared/modal/modal.component';
 
 @Component({
   selector: 'app-news',
@@ -14,22 +18,44 @@ import { Router } from '@angular/router';
 })
 export class NewsComponent implements OnInit {
 
-  news: any;
-  
-  constructor(private newsService: NewsService, private router: Router) { }
+  news: News = {} as News;
+  fields = { name: '', email: '' };
+    constructor(public authService: AuthService, private dialog: MatDialog, private newsService: NewsService) {}
 
   ngOnInit(): void {
-    this.newsService.getNews().subscribe((data: any) => {
-      this.news = data;
+    this.newsService.getNews().subscribe((news: News) => {
+      this.news = news;
+      this.orderNewsByDate();
     });
-    this.orderNewsByDate();
   }
 
   orderNewsByDate() {
-    this.news.sort((a: any, b: any) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
+    this.news.newItems.sort((a: any, b: any) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
   }
 
-  navigateToNews(id: number) {
-    this.router.navigate(['/news', id]);
+  navigateToNews(id: string) {
+    this.newsService.navigateToNews(id);
+  }
+
+  openAddNewsModal() {
+    const dialogRef = this.dialog.open(ModalComponent, {
+      width: '400px',
+      data: {
+        title: 'Ajouter une nouvelle actualité',
+        fields: [
+          { name: 'title', label: 'Titre', type: 'text', required: true },
+          { name: 'summary', label: 'Résumé', type: 'text', required: true },
+          { name: 'author', label: 'Auteur', type: 'text', required: true },
+          { name: 'picture', label: 'Image', type: 'file', required: false },
+          { name: 'publishDate', label: 'Date de publication', type: 'date', required: true }
+        ]
+      }
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        console.log('Nouvelle actualité ajoutée', result);
+      }
+    });
   }
 }

@@ -4,6 +4,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { CitationComponent } from '../../citation/citation.component';
+import { ClubNumbers } from '../../models/club';
 
 @Component({
   selector: 'app-club-chiffres',
@@ -19,13 +20,13 @@ import { CitationComponent } from '../../citation/citation.component';
 })
 export class ClubChiffresComponent {
 
-  numbers: any;
+  numbers: ClubNumbers = {} as ClubNumbers;
   constructor(private clubService: ClubDataService, private route: ActivatedRoute ) {
   }
 
   ngOnInit() {
-    this.clubService.getClubNumbers().subscribe((data: any) => {
-      this.numbers = data
+    this.clubService.getClubNumbers().subscribe((clubNumbers: ClubNumbers) => {
+      this.numbers = clubNumbers
     });
   }
 }

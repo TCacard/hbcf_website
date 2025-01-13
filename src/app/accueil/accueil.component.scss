@@ -6,29 +6,56 @@
     flex-direction: column;
 }
 
-.logo {
-    position: absolute;
-    top: 10%;
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+
+
+  .introduce-container {
     z-index: 2;
-    width: 5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        
+    .logo {
+      top: 10%;
+      z-index: 2;
+      width: 20%;
+    }
+    
+    .title {
+        z-index: 2;
+        color: white;
+        text-align: center;
+    }
+
+  }
+
 }
 
-.title {
-    position: absolute;
-    z-index: 2;
-    color: white;
-    text-align: center;
-}
-
-/* Utilisation des unités responsives (vw) pour adapter la taille du texte */
 .primary-title {
-    top: 30%;
-    font-size: 2.5vw; /* 6% de la largeur de l'écran */
+    font: bold 2.5vw 'Alegreya Sans' !important;
 }
 
 .secondary-title {
-    top: 45%;
-    font-size: 1.5vw; /* 3% de la largeur de l'écran */
+    font: 1.5vw 'Alegreya Sans' !important;
+}
+
+@media (max-width: 768px) {
+ 
+  .primary-title {
+      display: none;
+      font: bold 2.5vw 'Alegreya Sans' !important;
+  }
+  
+  .secondary-title {
+      display: none;
+      font: 1.5vw 'Alegreya Sans' !important;
+  }
 }
 
 .blur_img {
@@ -39,41 +66,142 @@
     z-index: 1;
 }
 
+.accueil-carousel {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  position: relative;
+}
+
 .carousel-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #6B5678;
+  cursor: pointer;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.carousel-photo {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.photo-link {
+  text-decoration: none;
+  display: block;
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #AD8EC1;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #6B5678;
+  color: #CFBCDB;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+
+  &.prev {
+      left: 10px;
   }
-  
-  .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+
+  &.next {
+      right: 10px;
   }
-  
-  .carousel-item {
-    min-width: 100%;
-    flex: 0 0 100%;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(107, 86, 120, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &.active {
+      background: #6B5678;
   }
-  
-  .carousel-controls {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+
+  &:hover {
+      background: rgba(107, 86, 120, 0.8);
   }
-  
-  .carousel-control {
-    padding: 10px 20px;
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    
-    &:hover {
-      background: rgba(0, 0, 0, 0.7);
-    }
-  }
+}
+
+
+.accueil-infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #CFBCDB;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.accueil-infos-item {
+  width: 25%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #80589A;
+}
+
+.accueil-info-images {
+  display: block;
+  width: 100%;
+}
+
+.accueil-infos-text-container {
+  background-color: #AD8EC1;
+  padding: 20px;
+}
+
+.accueil-infos-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.accueil-infos-text {
+
+}
+
+.accueil-infos-button {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  height: 50px;
+  background-color: #78568B;
+  color: #CFBCDB;
+  cursor: pointer;
+}

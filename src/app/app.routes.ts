@@ -3,6 +3,11 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { GalerieComponent } from './galerie/galerie.component';
 import { ContactComponent } from './contact/contact.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { PressReviewComponent } from './press-review/press-review.component';
+import { RegisterComponent } from './users/register/register.component';
+import { LoginComponent } from './users/login/login.component';
+import { AuthGuard } from './auth.guard';
+import { ProfileComponent } from './users/profile/profile.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/accueil', pathMatch: 'full' },
@@ -30,5 +35,11 @@ export const routes: Routes = [
     },
     { path: 'contact', component: ContactComponent },
     { path: 'inscriptions', component: InscriptionComponent },
+    { path: 'revue-de-presse', component: PressReviewComponent },
+
+
+    { path: 'register', component: RegisterComponent, canActivate: [AuthGuard] },
+    { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+    { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] }
 
 ];

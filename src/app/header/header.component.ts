@@ -6,10 +6,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
-import { Navigation, NavItem } from '../models/navigation.model';
 import { NavDataService } from '../services/nav-data.service';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CommonModule } from '@angular/common';
+import { Nav, NavItem } from '../models/nav';
+import { AuthService } from '../services/auth.service';
+import { User } from '../models/user';
+import { get } from 'http';
 
 @Component({
   selector: 'app-header',
@@ -28,23 +31,39 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  navItems: NavItem[] = [];
+  navigation: Nav = {} as Nav;
   isSubItemsVisible: boolean[] = [];
   isMenuOpened: boolean = false; // État du menu burger
-  constructor(private navDataService: NavDataService) {}
+  user: User = {} as User;
+
+  constructor(private navDataService: NavDataService, private auhtService: AuthService) {}
 
   ngOnInit() {
-    this.navDataService.getNavData().subscribe((data: any) => {
-      this.navItems = data;
-      this.isSubItemsVisible = new Array(this.navItems.length).fill(false);
+    this.navDataService.getNavData().subscribe((nav: any) => {
+      this.navigation = nav;
+      // this.isSubItemsVisible = new Array(this.navigation.length).fill(false);
     });
+
+    if (this.auhtService.isLoggedIn()) {
+      this.getUser();
+    }
   }
 
   toggleMenu(): void {
-    this.isMenuOpened = !this.isMenuOpened; // Ouvre ou ferme le menu burger
+    this.isMenuOpened = !this.isMenuOpened;
   }
 
   toggleSubItems(index: number): void {
-    this.isSubItemsVisible[index] = !this.isSubItemsVisible[index]; // Gère l'affichage des sous-menus
+    this.isSubItemsVisible[index] = !this.isSubItemsVisible[index];
+  }
+
+  NavigateToLink(link: string) {
+    window.open(link, "_blank");
+  }
+
+
+  getUser() {
+    this.user = this.auhtService.getUser();
+    console.log(this.user);
   }
 }

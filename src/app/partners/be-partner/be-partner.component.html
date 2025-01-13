@@ -3,20 +3,20 @@
   <h2 class="subtitle">{{become_partner?.description}}</h2>
 
   <div class="content">
-    <p *ngFor="let paragraph of become_partner?.content">{{paragraph}}</p>
+    <p *ngFor="let paragraph of become_partner?.content">{{paragraph.text}}</p>
   </div>
 
   <div class="contact-networks-container">
     <div class="social-networks">
       <p>Écrivez-nous à :</p>
-      <a href="mailto:{{become_partner?.contact?.email}}" class="mail-link">{{become_partner?.contact?.email}}</a>
+      <a href="mailto:{{getMailContact(become_partner?.contacts).link}}" class="mail-link">{{getMailContact(become_partner?.contacts).link}}</a>
     </div>
     <div class="center-line"></div>
     <div class="social-networks">
         <p>où suivez-nous sur :</p>
         <div class="networks-container">
-            <a *ngFor="let network of become_partner?.networks"
-             [href]="network.link" 
+            <a *ngFor="let network of become_partner?.contacts"
+             [href]="network?.link" 
              target="_blank"
              class="network-icon">
             <i *ngIf="network.name === 'Facebook'" class="fab fa-facebook"></i>
