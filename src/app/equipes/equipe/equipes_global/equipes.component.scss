@@ -1,9 +1,12 @@
 .equipe_content {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
     flex-direction: column;
+    top: var(--mat-toolbar-standard-height);;
+
 }
 
 .text {
@@ -64,7 +67,7 @@ h1 {
 }
 
 // Bouton
-button {
+.btn {
     display: block;
     margin: 20px auto; /* Centrage du bouton */
     padding: 12px 25px;
@@ -76,11 +79,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
     background-color: #5A466A; /* Couleur légèrement différente au survol */
 }
 
-button:active {
+.btn:active {
     background-color: #4E3D5F; /* Couleur plus foncée lors du clic */
 }
 
@@ -122,6 +125,31 @@ button:active {
     position: relative;
     margin-bottom: 10px;
   }
+
+
+  .add-team-card {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+    border: 1px solid #6B5678;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 1px #6B5678;
+    align-items: center;
+    color: #6B5678;
+    font-size: 55px;
+    background-color: #CFBCDB;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.add-team-card:hover {
+  cursor: pointer;
+  transform: translateY(-5px) scale(1.05); /* Légère élévation et agrandissement */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+  background-color: #B8A6C6; /* Changement de couleur au survol */
+}
+
   
   .team-image-wrapper {
     display: flex;
@@ -158,6 +186,11 @@ button:active {
   
   .team-image-wrapper:active .team-button {
     background-color: #4E3D5F; /* Couleur plus foncée lors du clic */
+  }
+
+  ::ng-deep .mat-mdc-dialog-surface {
+    background-color: transparent !important;
+    border-radius: inherit !important;
   }
   
   @media (max-width: 768px) {

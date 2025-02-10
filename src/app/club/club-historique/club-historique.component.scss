@@ -1,9 +1,11 @@
 .club-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 20px 0;
+    top: var(--mat-toolbar-standard-height);
 }
 
 .text{

@@ -30,13 +30,7 @@ export class EquipesDetailsComponent {
 
 
   ngOnInit(): void {
-    this.getTeamById();
-  }
-
-
-  getTeamById(): void {
-    const id = +(this.route.snapshot.paramMap.get('id') ?? 0); // Récupère l'ID dans l'URL
-    this.teamsService.getTeamById(id).subscribe(team => {
+    this.teamsService.getTeamById(this.route.snapshot.params['id']).subscribe(team => {
       this.team = team;
     });
   }

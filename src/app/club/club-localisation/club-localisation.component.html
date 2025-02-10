@@ -1,19 +1,19 @@
 <div class="club-content">
-    <h1 class="title">{{ location.title }}</h1>
+    <h1 class="title">{{ location?.title }}</h1>
     <div class="global-content">
         <div class="access-content">
-            <p class="part-title">{{ location.content.parts[0].title }}</p>
-            <div class="entries-content" *ngFor="let entry of location.content.parts[0].entries">
-                <p class="entry-name">{{ entry.name }}</p>
-                <p class="entry-text"> {{ entry.text }} </p>
+            <p class="part-title">{{ location?.parts[0]?.title }}</p>
+            <div class="entries-content" *ngFor="let entry of location?.parts[0]?.entries">
+                <p class="entry-name">{{ entry?.name }}</p>
+                <p class="entry-text"> {{ entry?.text }} </p>
             </div>
         </div>
         <div class="location-content">
-            <p class="part-title">{{ location.content.parts[1].title }}</p>
+            <p class="part-title">{{ location?.parts[1]?.title }}</p>
             <p 
-            [innerHTML]="location.content.parts[1].location" 
+            [innerHTML]="location?.parts[1]?.location" 
             class="location-text"
-            (click)="openNavigation(location.content.parts[1].location)">
+            (click)="openNavigation(location?.parts[1]?.location)">
           </p>
           
         </div>

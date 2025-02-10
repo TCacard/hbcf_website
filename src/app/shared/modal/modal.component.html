@@ -1,0 +1,44 @@
+<div>
+  <h2>Ajouter une équipe</h2>
+  <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <!-- Boucle pour les champs -->
+    <div *ngFor="let field of data.fields">
+      <!-- Champs texte -->
+      <div *ngIf="field.type === 'text'">
+        <label [for]="field.name">{{ field.label }} :</label>
+        <input
+          [id]="field.name"
+          [type]="field.type"
+          [formControlName]="field.name"
+          [placeholder]="field.label"
+          [required]="field.required"
+        />
+      </div>
+
+      <!-- Menu déroulant -->
+      <div *ngIf="field.type === 'select'">
+        <label [for]="field.name">{{ field.label }} :</label>
+        <select [id]="field.name" [formControlName]="field.name" [required]="field.required">
+          <option value="">Sélectionnez une option</option>
+          <option *ngFor="let option of field.options" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+
+      <!-- Champ fichier -->
+      <div *ngIf="field.type === 'file'">
+        <label [for]="field.name">{{ field.label }} :</label>
+        <input
+          [id]="field.name"
+          [type]="field.type"
+          (change)="onFileSelected($event)"
+          accept="image/*"
+        />
+      </div>
+    </div>
+
+    <!-- Bouton Envoyer -->
+    <div>
+      <button type="submit" [disabled]="!formGroup.valid">Soumettre</button>
+    </div>
+  </form>
+</div>

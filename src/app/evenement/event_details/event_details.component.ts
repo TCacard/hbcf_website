@@ -23,7 +23,7 @@ import { CitationComponent } from '../../citation/citation.component';
   styleUrl: './event_details.component.scss'
 })
 export class EvenementDetailsComponent {
-  event: any
+  event: ClubEvent = {} as ClubEvent;
   constructor(
     private route: ActivatedRoute,
     private eventService: EventDataService
@@ -31,14 +31,9 @@ export class EvenementDetailsComponent {
 
 
   ngOnInit(): void {
-    this.getEventById();
-  }
-
-
-  getEventById(): void {
-    const id = +(this.route.snapshot.paramMap.get('id') ?? 0); // Récupère l'ID dans l'URL
-    this.eventService.getEventById(id).subscribe(event => {
+    this.eventService.getEventById(this.route.snapshot.params['id']).subscribe(event => {
       this.event = event;
     });
   }
+
 }

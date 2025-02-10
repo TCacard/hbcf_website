@@ -23,8 +23,8 @@ export class EvenementComponent {
   events: ClubEvent[] = [];
 
   ngOnInit() {
-    this.eventService.getEventData().subscribe((data: any) => {
-      this.events = data.events;
+    this.eventService.getEventData().subscribe((events: ClubEvent[]) => {
+      this.events = events;
     });
 
   }

@@ -1,0 +1,44 @@
+<div *ngIf="news" class="news-details">
+  <h1>{{news.title}}</h1>
+  <div class="metadata">
+    <span class="date">{{news.publishDate | date}}</span>
+    <span class="author">{{news.author}}</span>
+  </div>
+  <div class="content">
+    <img *ngIf="news.pictures" [src]="news.pictures[0].link" [alt]="news.title">
+    <div *ngFor="let paragraph of news.content">
+        <h3 *ngIf="paragraph.title">{{paragraph.title}}</h3>
+        <ul *ngIf="paragraph.list_element">
+            <li *ngFor="let element of paragraph.list_element">{{element.text}}</li>
+        </ul>
+        <div class="paragraph-content" *ngIf="paragraph.text && !paragraph.link && !paragraph.email">
+            <p>{{paragraph.text}}</p>
+            <button *ngIf="paragraph.document" (click)="downloadFile(paragraph.document)" class="download-button">Télécharger le document</button>
+        </div>
+        <div *ngIf="paragraph.text && paragraph.email">
+            <p>{{paragraph.text}}</p>
+            <a *ngIf="paragraph.email" href="mailto:{{paragraph.email}}" class="mail-link">{{paragraph.email}}</a>
+        </div>
+        <a *ngIf="paragraph.link" [href]="paragraph.link" target="_blank">{{paragraph.text}}</a>
+    </div>
+    <div class="share-menu">
+        <button class="share-button" (click)="toggleShareMenu()">
+            <i class="fas fa-share-alt"></i>
+        </button>
+        <div class="share-options" [class.active]="isShareMenuOpen">
+            <a (click)="shareOnWhatsapp()" class="whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a (click)="shareOnFacebook()" class="facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a (click)="shareOnInstagram()" class="instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+    <!-- <div class="likes" (click)="updateLikes(news.id)">
+        <span>Nombre de likes : {{news.likes}}</span>
+    </div> -->
+  </div>
+</div>

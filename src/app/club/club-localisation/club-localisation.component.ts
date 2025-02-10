@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CitationComponent } from '../../citation/citation.component';
 import { ClubDataService } from '../../services/club.service';
+import { ClubLocation } from '../../models/club';
 
 
 @Component({
@@ -12,8 +13,7 @@ import { ClubDataService } from '../../services/club.service';
   imports: [
     RouterModule,
     CommonModule,
-    MatIconModule,
-    CitationComponent  
+    MatIconModule
   ],
   templateUrl: './club-localisation.component.html',
   styleUrls: ['./club-localisation.component.scss'],
@@ -25,9 +25,8 @@ export class ClubLocalisationComponent {
   }
 
   ngOnInit() {
-    const name = this.route.snapshot.routeConfig?.path ?? ""
-    this.clubService.getServiceByName(name).subscribe((data: any) => {
-      this.location = data
+    this.clubService.getClubLocation().subscribe((clubLocation: ClubLocation) => {
+      this.location = clubLocation
     });
   }
 

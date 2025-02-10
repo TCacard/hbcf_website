@@ -1,0 +1,18 @@
+<div class="profile-container">
+    <h1 class="title">Profil de l'utilisateur</h1>
+    
+        <div class="user-info">
+          <p><strong>Nom :</strong> {{ lastName }}</p>
+        </div>
+    
+    <div class="user-info">
+      <p><strong>Prénom :</strong> {{ firstName }}</p>
+    </div>
+  
+    <div class="user-info">
+      <p><strong>Email :</strong> {{ email }}</p>
+    </div>
+
+    <button class="btn" (click)="logout()">Se déconnecter</button>
+  </div>
+  

@@ -1,0 +1,78 @@
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 16px;
+  background-color: #CFBCDB; /* Fond doux pour s'accorder à une palette violet pâle */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 90%; /* Plus compact */
+  max-width: 400px; /* Largeur maximale */
+  margin: 0 auto;
+
+  h2 {
+    font-size: 18px;
+    color: #6b5678;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: #6b5678;
+      }
+
+      input,
+      select {
+        font-size: 14px;
+        padding: 8px;
+        border: 1px solid #d3c9df;
+        border-radius: 4px;
+        background-color: #ffffff;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: #6b5678;
+          outline: none;
+        }
+      }
+
+      input[type="file"] {
+        padding: 0;
+      }
+    }
+
+    button {
+      align-self: center;
+      background-color: #6b5678;
+      color: #ffffff;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #553c5e;
+      }
+
+      &:disabled {
+        background-color: #d3c9df;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

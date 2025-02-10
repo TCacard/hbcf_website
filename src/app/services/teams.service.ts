@@ -8,19 +8,24 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class TeamsService {
-  private navUrl = 'assets/data.json';
+  private navUrl = 'http://localhost:5000/teams';
+  private tempUrl = 'assets/data.json';
 
   constructor(private http: HttpClient) {}
 
-  getTeamData(): Observable<any> {
-    return this.http.get<Team>(this.navUrl);
+  getTeams(): Observable<any> {
+    return this.http.get<any>(this.navUrl).pipe(
+      map(data => {
+        return data;
+      })
+    );
   }
 
+
   getTeamById(id: number): Observable<any> {
-    return this.getTeamData().pipe(
+    return this.getTeams().pipe(
       map(data => {
-        const allTeams = [...data.equipes.equipes_competition, ...data.equipes.equipe_dirigeante];
-        return allTeams.find(team => team.id === id);
+        return data.find((team: any) => team._id === id);
       })
     );
   }

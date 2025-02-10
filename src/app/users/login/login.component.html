@@ -1,0 +1,46 @@
+<div class="login-container">
+    <h1 class="title text">Connexion</h1>
+  
+    <form (submit)="login()" novalidate>
+      <!-- Champ Email -->
+      <div class="form-group">
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="email"
+          name="email"
+          class="form-control floating-input"
+          placeholder=" "
+          required
+        />
+        <label for="email" class="floating-label">Email</label>
+      </div>
+  
+      <!-- Champ Mot de passe -->
+      <div class="form-group">
+        <input
+          type="password"
+          id="password"
+          [(ngModel)]="password"
+          name="password"
+          class="form-control floating-input"
+          placeholder=" "
+          required
+        />
+        <label for="password" class="floating-label">Mot de passe</label>
+      </div>
+  
+      <!-- Message d'erreur -->
+      <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+  
+      <!-- Bouton Connexion -->
+      <button type="submit" class="btn btn-primary">Se connecter</button>
+    </form>
+  
+    <!-- Lien vers la page d'inscription -->
+    <p class="register-link">
+      Vous n'avez pas de compte ? 
+      <a href="http://localhost:4200/register" class="link">Créer un compte</a>
+    </p>
+  </div>
+  

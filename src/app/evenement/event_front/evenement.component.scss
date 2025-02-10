@@ -1,4 +1,6 @@
 .event_content {
+    position: relative;
+    top: var(--mat-toolbar-standard-height);
     display: flex;
     align-items: center;
     width: 100%;

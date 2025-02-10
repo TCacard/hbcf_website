@@ -1,116 +1,176 @@
-.toolbar {
-  background-color: #CFBCDB;
+.header-container {
+  top: 0;
+  position: fixed;
+  background-color: rgba(207, 188, 219, 0.7) !important;
+  z-index: 1000;
+  flex: 1 1 auto;
+  justify-content: space-between;
 }
 
-.spacer {
+.header-container-opened {
+  position: fixed;
+  background-color: rgba(207, 188, 219, 0.7) !important;
+  z-index: 1000;
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+
+
+/* ============================================
+   Section: Header Logo
+============================================ */
+
+.logo-header {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  height: 100%;
+  align-items: center;
 }
 
-
-.burger-icon {
-  display: none;
-  color: #6B5678;
+.logo-btn {
+  display: flex;
+  max-height: 100%;
+  width: auto;
 }
 
-.citation {
-  display: none;
-  color: #6B5678;
-  font-family: 'Alegreya Sans';
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+/* ============================================
+   Section: Header Navigation
+============================================ */
+
+.btn_menu {
+  font-family: 'Alegreya sans';
   font-weight: bold;
-}
-
-
-
+  font-size: 15pt;
+  color: #6B5678 !important;
+} 
 .active-btn {
   background-color: rgba(107, 86, 120, 0.19) !important;
 }
 
-.btn_menu {
-  background-color: #CFBCDB;
-  border: none;
-  color: #6B5678 !important;
+
+
+/* ============================================
+   Section: Header Icons
+============================================ */
+
+.burger-icon {
+  display: none;
+}
+
+.icon-header {
+  display: flex;
+  height: 64px;
+  align-items: center;
+}
+
+
+
+span {
+  color: #6B5678;
+}
+
+mat-icon {
+  color: #6B5678;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  font-family: 'Alegreya sans';
   font-weight: bold;
-  font-family: 'Alegreya Sans';
   font-size: 15pt;
-  cursor: pointer;
-  border-radius: 7%;
-  padding: 6px 10px;
-  width: 100%;
-}
-
-.logo-btn {
-  padding: 0;
-  margin-right: 20px;
-  background-color: #CFBCDB;
-  border: none;
-}
-
-.logo {
-  height: 55px;
-  width: auto;
-  cursor: pointer;
-}
-
-.sub-item {
-  padding-left: 20px;
-  font-size: 9pt;
-  color: #6B5678 !important;
-}
-
-::ng-deep .mat-drawer-container {
-  background-color: #CFBCDB !important;
-}
-
-.disabled {
-  color: gray !important;
-  cursor: not-allowed !important;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease, visibility 1s ease;
 }
 
 
-.toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.icon-container-closed {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease, visibility 1s ease;  
 }
 
-.logo-btn {
-  img {
-    height: 40px;
+
+
+
+/* ============================================
+   Section: Header mobile
+============================================ */
+
+@media (max-width: 1047px) {
+
+  .header-container-closed {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(207, 188, 219, 0.7) !important;
+    transition: height 1s ease, background-color 1s ease;
   }
-}
+  
+  .header-container-opened {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    background-color: rgba(207, 188, 219, 1) !important;
+    transition: height 1s ease, background-color 1s ease;
+  }
 
-.desktop-menu {
-  display: flex;
-  align-items: center;
-}
 
-.spacer {
-  flex: 1;
-}
+  .nav-header {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(207, 188, 219, 1) !important;
+    position: absolute;
+    left: 0 !important;
+    top: 64px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: height 1s ease, background-color 1s ease;
+  }
 
-.burger-menu {
-  display: flex;
-  flex-direction: column;
-  background-color: #CFBCDB;
-  padding: 1rem;
-}
-@media (max-width: 1035px) {
-  .desktop-menu {
-    display: none;
+  .nav-header-opened {
+    width: 100%;
+    height: 0;
+    left: 0 !important;
+    position: absolute;
+    top: 64px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: height 1s ease, background-color 1s ease;
+  }
+
+  .btn_menu {
+    justify-content: flex-start;
+  }
+
+  .logo-header-opened {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    padding-top: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease, visibility 1s ease;
+  }
+
+  .logo-header {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    padding-top: 20px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease, visibility 1s ease;
   }
 
   .burger-icon {
     display: block;
+    cursor: pointer;
   }
-
-  .citation {
-    display: block;
-  }
-}
-
-.sub-menu {
-  display: flex;
-  justify-content: center;
 }

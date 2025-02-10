@@ -1,0 +1,101 @@
+.login-container {
+    position: relative;
+    top: var(--mat-toolbar-standard-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #CFBCDB;
+    color: #6B5678;
+  
+    .title {
+      text-shadow: 4px 4px 4px #6B5678;
+      font-size: 36px;
+    }
+  
+    form {
+      width: 50%;
+    }
+  
+    .form-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+  
+      .floating-input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #6B5678;
+        border-radius: 10px;
+        font-size: 1rem;
+        background-color: #CFBCDB;
+        color: #6B5678;
+        box-shadow: inset 0px 0px 2px 0px #6B5678;
+      
+        // Ombrage pour le placeholder
+        &::placeholder {
+          color: rgba(107, 86, 120, 0.7);
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+        }
+      
+        &:focus {
+          outline: none;
+          border-color: #6B5678;
+          box-shadow: 0 0 5px rgba(107, 86, 120, 0.5);
+        }
+      
+        &:focus + .floating-label,
+        &:not(:placeholder-shown) + .floating-label {
+          top: -12px;
+          left: 12px;
+          font-size: 0.8rem;
+          color: #6B5678;
+          background-color: #CFBCDB;
+          padding: 0 5px;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+  
+      .floating-label {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        font-size: 1rem;
+        color: #6B5678;
+        pointer-events: none;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  
+    .btn {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 25px;
+      background-color: #6B5678;
+      color: #CFBCDB;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #5A466A;
+      }
+    }
+  
+    .register-link {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+  
+      .link {
+        color: #6B5678;
+        text-decoration: underline;
+  
+        &:hover {
+          color: #5A466A;
+        }
+      }
+    }
+  }
+  

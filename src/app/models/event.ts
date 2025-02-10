@@ -2,7 +2,7 @@ import { Content } from "./content";
 
 
 export interface ClubEvent {
-    id: number;
+    _id: number;
     name: string;
     picture: string;
     details: Details;

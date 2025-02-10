@@ -1,1 +1,49 @@
-<p>inscription works!</p>
+<div class="page-container">
+    <div class="inscription-container">
+        <p class="pre-title"> {{ inscriptionPage.title }} </p>
+        <h1 class="title text">{{ inscriptionPage.clubName }}</h1>
+        <div *ngFor="let part of inscriptionPage.parts" class="part-div">
+            <h2 class="part-title"> {{ part.title }} </h2>
+            <div *ngIf="part.yearTable" class="div-cell">
+                <table>
+                    <thead>
+                        <tr class="tr">
+                            <th *ngFor="let column of part.yearTable.columns" scope="col" class="th">{{column}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of part.yearTable.rows" class="tr">
+                            <td scope="row" class="cell" class="th">{{row.year}}</td>
+                            <td scope="row" class="cell" class="th">{{row.price}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div *ngIf="part.content && !part.contacts" class="div-cell">
+                <div *ngFor="let item of part.content">
+                    <p *ngIf="item.text && !item.link">{{ item.text }}</p>
+                    <ul *ngIf="item.list_element">
+                        <li *ngFor="let element of item.list_element">{{element.text}}</li>
+                    </ul>
+                    <div *ngIf="item.text && item.link">
+                        <button (click)="navigateToForm(item.link)">{{ item.text }}</button>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="part.warning" class="div-cell">
+                <div *ngFor="let item of part.warning" class="warning">
+                    <p *ngIf="item">{{ item.text }}</p>
+                </div>
+            </div>
+            <div *ngIf="part.contacts" class="contact-container div-cell">
+                <img *ngIf="part.logo" [src]="part.logo" class="contact-img">
+                <p *ngFor="let item of part.content" class="contact-part">{{ item.text }}</p>
+                <div *ngFor="let contact of part.contacts" class="contact-data">
+                    <p class="contact-field">{{contact.phone}}</p>
+                    <p class="contact-field"> - </p>
+                    <a class="contact-field" href="mailto:{{contact.link}}" class="mail-link">{{contact.link}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

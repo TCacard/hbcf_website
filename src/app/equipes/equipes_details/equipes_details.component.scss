@@ -1,4 +1,6 @@
 .equipe_content {
+    position: relative;
+    top: var(--mat-toolbar-standard-height);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,6 +132,10 @@ td {
 
     .niveau-wrapper {
         width: 90%; /* Ajuste la largeur du tableau sur mobile */
+    }
+
+    .entrainements-wrapper {
+        width: 90%;
     }
 
     .entrainement-icon {

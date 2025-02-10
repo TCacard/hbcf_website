@@ -1,1 +1,39 @@
-<p>contact works!</p>
+<div class="contact">
+  <h1 class="title">{{ contact?.title }}</h1>
+
+  <div class="contact-container">
+    <div class="contact-form">
+        <p>N'hésitez pas à communiquer en utilisant le formulaire ci-dessous ou les coordonnées suivantes</p>
+        <form class="form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" placeholder="Nom" name="lastname" [(ngModel)]="formData.lastname" class="text-area" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Prénom" name="firstname" [(ngModel)]="formData.firstname" class="text-area" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Message" name="message" rows="5" [(ngModel)]="formData.message" class="text-area message" required></textarea>
+            </div>
+            <button type="submit" class="button" [disabled]="!contactForm.form.valid">Envoyer</button>
+        </form>
+    </div>
+    <div class="contact-separator"></div>
+    <div class="contact-info">
+        <div class="contact-location">
+            <p *ngFor="let location of contact?.location">{{ location.text}}</p>
+        </div>
+        <div class="contact-emails" *ngFor="let contact of contact?.contacts">
+            <p>{{ contact.name }}:</p>
+            <a href="mailto:{{contact.link}}" class="mail-link">{{contact.link}}</a>
+            <p> - </p>
+            <p>{{ contact.phone }}</p>
+        </div>
+        <div class="contact-timetable" *ngFor="let timetable of contact?.timetable">
+            <p>{{ timetable.day }}</p>
+            <p>{{ timetable.hours }}</p>
+        </div>
+    </div>
+  </div>
+</div>

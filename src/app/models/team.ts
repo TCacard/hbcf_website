@@ -1,42 +1,43 @@
 export interface Team {
-    id: number;
+    _id: number;
     name: string;
-    image: string;
-    civilite: string;
+    picture: string;
+    civility: string;
+    details: Details;
 }
 
 export interface Details {
-    annee: string;
-    niveaux: Niveau[];
-    entrainement: Entrainement[];
-    entraineurs: Entraineur[];
+    year: string;
+    levels: Level[];
+    trainings: Training[];
+    trainers: Trainer[];
     players: Player[]
 
 }
 
-export interface Niveau {
-    equipe: string;
-    niveau: string;
+export interface Level {
+    team_name: string;
+    level_name: string;
 }
 
-export interface Entrainement {
-    jour: string;
-    horaire: string;
-    equipe: string;
+export interface Training {
+    day: string;
+    schedule: string;
+    team_name: string;
 }
 
-export interface Entraineur {
-    nom: string;
-    prenom:string;
-    equipe: string;
-    telephone: string;
-    photo: string;
+export interface Trainer {
+    name: string;
+    surname:string;
+    team: string;
+    phone: string;
+    picture: string;
 }
 
 export interface Player {
-    nom: string;
-    prenom: string;
-    poste :string;
-    photo : string
+    name: string;
+    surname: string;
+    // position :string;
+    picture : string
 }
 
