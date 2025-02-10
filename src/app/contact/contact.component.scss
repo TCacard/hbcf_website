@@ -1,12 +1,14 @@
 $color: #6B5678;
 
 .contact{
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
     color: $color;
     height: 85%;
+    top: var(--mat-toolbar-standard-height);
   }
   
   .title {

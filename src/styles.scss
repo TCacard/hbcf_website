@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; margin: 0; padding: 0;}
 body { 
-    margin: 0; 
+    margin: 0;
+    padding: 0; 
     height: 100%;
     width: 100%;
 }
 .global {
-    margin-top: 74px;
     background-color: #CFBCDB !important;
     font-family: 'Alegreya Sans' !important; 
 }

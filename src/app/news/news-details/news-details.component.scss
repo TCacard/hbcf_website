@@ -1,6 +1,8 @@
 $color: #6B5678;
 
 .news-details {
+  position: relative;
+  top: var(--mat-toolbar-standard-height);
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;

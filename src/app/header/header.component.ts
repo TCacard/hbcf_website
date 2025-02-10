@@ -35,6 +35,7 @@ export class HeaderComponent implements OnInit {
   isSubItemsVisible: boolean[] = [];
   isMenuOpened: boolean = false; // État du menu burger
   user: User = {} as User;
+  iconItems: NavItem[] = [];
 
   constructor(private navDataService: NavDataService, private auhtService: AuthService) {}
 
@@ -42,6 +43,10 @@ export class HeaderComponent implements OnInit {
     this.navDataService.getNavData().subscribe((nav: any) => {
       this.navigation = nav;
       // this.isSubItemsVisible = new Array(this.navigation.length).fill(false);
+    });
+
+    this.navDataService.getIconItems().subscribe((items: any) => {
+      this.iconItems = items;
     });
 
     if (this.auhtService.isLoggedIn()) {

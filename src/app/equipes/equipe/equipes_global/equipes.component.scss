@@ -1,9 +1,12 @@
 .equipe_content {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
     flex-direction: column;
+    top: var(--mat-toolbar-standard-height);;
+
 }
 
 .text {

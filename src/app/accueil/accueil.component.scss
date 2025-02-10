@@ -1,9 +1,16 @@
+// * {
+//   position: relative;
+//   top: var(--mat-toolbar-standard-height);
+// }
+
+
 .img {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    top: var(--mat-toolbar-standard-height);
 }
 
 .img-container {

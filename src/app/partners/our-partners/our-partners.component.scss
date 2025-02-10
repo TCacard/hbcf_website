@@ -1,4 +1,6 @@
 .partners-container {
+    position: relative;
+    top: var(--mat-toolbar-standard-height);
     padding: 2rem;
     text-align: center;
   }
