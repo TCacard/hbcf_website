@@ -12,8 +12,8 @@
             <div class="carousel-track" #track>
                 <div class="carousel-slide">
                     <div (click)="navigateToNews(newItem[currentSlide]._id)" target="_blank" class="photo-link">
-                        <img *ngIf="newPictures[currentSlide]?.link" [src]="newPictures[currentSlide]?.link" [alt]="" class="carousel-photo">
-                        <div class="photo-caption text">{{ newItem[currentSlide]?.summary }}</div>
+                        <img *ngIf="newPictures[currentSlide]?.link" [src]="newPictures[currentSlide].link" [alt]="" class="carousel-photo">
+                        <div class="photo-caption text">{{ newItem[currentSlide].summary }}</div>
                     </div>
                 </div>
             </div>

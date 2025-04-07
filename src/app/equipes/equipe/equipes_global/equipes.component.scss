@@ -66,6 +66,19 @@ h1 {
     margin-bottom: 20px; /* Espacement sur petits écrans si l'image est au-dessus du texte */
 }
 
+.scorenco-widget {
+    width: 80%;
+    height: 100%;
+}
+
+.widgets {
+  height: 500px; 
+  width:100%; 
+  border-width:0;
+  color: #6B5678;
+  background-color: #CFBCDB !important;
+}
+
 // Bouton
 .btn {
     display: block;
@@ -102,6 +115,10 @@ h1 {
     .image_matchs {
         width: 80%; /* Réduit la taille de l'image sur petits écrans */
     }
+
+    .scorenco-widget {
+        width: 90%; 
+    }
 }
 
 @media (max-width: 480px) {
@@ -112,6 +129,8 @@ h1 {
 
 .equipes-content {
     display: flex;
+    width: 100%;
+    height: 100%;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -119,7 +138,8 @@ h1 {
   }
   
   .team-card {
-    width: 30%; /* 30% pour avoir trois images par ligne */
+    width: 30%;
+    height: 100%;
     display: flex;
     justify-content: center;
     position: relative;

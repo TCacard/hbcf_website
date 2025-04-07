@@ -32,7 +32,7 @@ export class EquipesComponent {
   ngOnInit() {
     this.teamService.getTeams().subscribe((teams: any) => {
       this.competition_teams = teams.filter((team: any) => team.type === 'Compétitive');
-      this.leader_teams = teams.filter((team: any) => team.type === 'Leading');
+      this.leader_teams = teams.filter((team: any) => team.type === 'Dirigeante');
     })
   }
 
@@ -45,7 +45,7 @@ export class EquipesComponent {
     const dialogRef = this.dialog.open(ModalComponent, {
       width: '400px',
       data: {
-        title: 'Titre du Modal',
+        title: 'Ajouter une équipe',
         fields: [
           { name: 'name', label: 'Nom', type: 'text', required: true },
           { name: 'civility', label: 'Civilité', type: 'select', options: ['Joueurs', 'Joueuses'], required: true },
@@ -57,7 +57,14 @@ export class EquipesComponent {
     
     dialogRef.afterClosed().subscribe(result => {
       console.log('Le modal a été fermé', result);
-      debugger
+      // Code pour ajouter le fichier dans le assets/equipes
+      this.teamService.postTeam(result, result.picture).subscribe({
+        next: (response) => console.log("✅ Réponse du serveur :", response),
+        error: (error) => console.error("❌ Erreur lors de la requête :", error)
+      });
+      window.location.reload();
+      
+      
     });
   }
 

@@ -18,7 +18,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './accueil.component.html',
   styleUrl: './accueil.component.scss'
 })
-export class AccueilComponent implements OnInit, AfterViewInit{
+export class AccueilComponent implements OnInit{
 
   constructor(private newsService: NewsService, private accueilService: AccueilService, private router: RouterModule) {
 
@@ -31,11 +31,7 @@ export class AccueilComponent implements OnInit, AfterViewInit{
   accueilData: AccueilPage = {} as AccueilPage;
   logohbcf: Picture = {} as Picture
   image_accueil: Picture = {} as Picture;
-  newPictures: Picture[] = []
-
-  ngAfterViewInit(): void {
-  }
-  
+  newPictures: Picture[] = [];
   
   ngOnInit(): void {
     this.newsService.getNews().subscribe((news) => {

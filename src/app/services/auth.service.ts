@@ -10,12 +10,17 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   private apiUrl = 'http://localhost:5000';
-  private isAuthenticated: boolean = false;
+
 
   constructor(private http: HttpClient, private router: Router) { }
 
   getDecodedToken() {
-    const token = localStorage.getItem('token');
+    let token: String|null = ""
+
+    if(localStorage) {
+      console.log("localStorage")
+      token = localStorage.getItem('token');
+    }
     if (token) {
       try {
         // On découpe le token en trois parties (header, payload, signature)
