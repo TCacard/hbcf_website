@@ -47,7 +47,7 @@ export class NewsComponent implements OnInit {
           { name: 'summary', label: 'Résumé', type: 'text', required: true },
           { name: 'author', label: 'Auteur', type: 'text', required: true },
           { name: 'picture', label: 'Image', type: 'file', required: false },
-          { name: 'publishDate', label: 'Date de publication', type: 'date', required: true }
+          { name: 'publishDate', label: 'Date de publication', type: 'date', required: false }
         ]
       }
     });

@@ -4,41 +4,59 @@
     <!-- Boucle pour les champs -->
     <div *ngFor="let field of data.fields">
       <!-- Champs texte -->
-      <div *ngIf="field.type === 'text'">
-        <label [for]="field.name">{{ field.label }} :</label>
+      <div *ngIf="field.type === 'text'" class="floating-label" [class.filled]="isFieldFilled(field.name)">
         <input
           [id]="field.name"
           [type]="field.type"
           [formControlName]="field.name"
-          [placeholder]="field.label"
           [required]="field.required"
+          #inputField
         />
+        <label [for]="field.name">{{ field.label }}</label>
       </div>
 
       <!-- Menu déroulant -->
-      <div *ngIf="field.type === 'select'">
-        <label [for]="field.name">{{ field.label }} :</label>
+      <div *ngIf="field.type === 'select'" class="floating-select">
+        <label [for]="field.name">{{ field.label }}</label>
         <select [id]="field.name" [formControlName]="field.name" [required]="field.required">
-          <option value="">Sélectionnez une option</option>
+          <option value="" disabled selected hidden>Sélectionnez une option</option>
           <option *ngFor="let option of field.options" [value]="option">{{ option }}</option>
         </select>
       </div>
+      
 
       <!-- Champ fichier -->
-      <div *ngIf="field.type === 'file'">
-        <label [for]="field.name">{{ field.label }} :</label>
-        <input
-          [id]="field.name"
-          [type]="field.type"
-          (change)="onFileSelected($event)"
-          accept="image/*"
-        />
-      </div>
+      <div *ngIf="field.type === 'file'" 
+      class="file-upload" 
+      (dragover)="onDragOver($event)" 
+      (dragleave)="onDragLeave($event)" 
+      (drop)="onDrop($event)">
+   
+   <label [for]="field.name">{{ field.label }}</label>
+   
+   <!-- Zone de drop personnalisée -->
+   <div class="drop-zone" (click)="fileInput.click()">
+     <p *ngIf="!selectedFile">Glissez-déposez un fichier ici ou cliquez pour sélectionner</p>
+     <p *ngIf="selectedFile">{{ selectedFile.name }}</p>
+   </div>
+ 
+   <!-- Input file caché -->
+   <input 
+     #fileInput
+     [id]="field.name"
+     type="file"
+     (change)="onFileSelected($event)"
+     accept="image/*"
+     hidden
+   />
+ </div>
+ 
     </div>
 
     <!-- Bouton Envoyer -->
     <div>
       <button type="submit" [disabled]="!formGroup.valid">Soumettre</button>
+      <button (click)="closeModal()">Annuler</button>
     </div>
   </form>
 </div>

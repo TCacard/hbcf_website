@@ -26,7 +26,7 @@
           <div class="team-button">{{ team.name }}</div>
         </a>
       </div>
-      <button *ngIf="authService.getUserRole() === 'admin'" mat-raised-button (click)="openDialog()" class="add-team-card">+</button>
+      <!-- <button *ngIf="authService.getUserRole() === 'admin'" mat-raised-button (click)="openDialog()" class="add-team-card">+</button> -->
       
     </div>
     <h1 class="text title">Équipes Dirigeante</h1>
@@ -38,6 +38,6 @@
         </a>
       </div>
 
-      <button *ngIf="authService.getUserRole() === 'admin'" mat-raised-button (click)="openDialog()" class="add-team-card">+</button>
+      <!-- <button *ngIf="authService.getUserRole() === 'admin'" mat-raised-button (click)="openDialog()" class="add-team-card">+</button> -->
     </div>
 </div>

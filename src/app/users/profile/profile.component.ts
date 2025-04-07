@@ -13,6 +13,7 @@ export class ProfileComponent {
   email: string = '';
   firstName: string = '';
   lastName: string = '';
+  role: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -23,6 +24,7 @@ export class ProfileComponent {
       this.email = decodedToken.email;
       this.firstName = decodedToken.firstName;
       this.lastName = decodedToken.lastName;
+      this.role = decodedToken.role;
     }
   }
 

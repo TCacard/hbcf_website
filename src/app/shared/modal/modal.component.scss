@@ -2,77 +2,233 @@ div {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 16px;
-  background-color: #CFBCDB; /* Fond doux pour s'accorder à une palette violet pâle */
+  padding: 5px;
+  background-color: #CFBCDB;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  width: 90%; /* Plus compact */
-  max-width: 400px; /* Largeur maximale */
+  width: 90%;
+  max-width: 400px;
   margin: 0 auto;
-
-  h2 {
-    font-size: 18px;
-    color: #6b5678;
-    margin-bottom: 12px;
-    text-align: center;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-
-      label {
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 4px;
-        color: #6b5678;
-      }
-
-      input,
-      select {
-        font-size: 14px;
-        padding: 8px;
-        border: 1px solid #d3c9df;
-        border-radius: 4px;
-        background-color: #ffffff;
-        transition: border-color 0.3s ease;
-
-        &:focus {
-          border-color: #6b5678;
-          outline: none;
-        }
-      }
-
-      input[type="file"] {
-        padding: 0;
-      }
-    }
-
-    button {
-      align-self: center;
-      background-color: #6b5678;
-      color: #ffffff;
-      padding: 10px 20px;
-      font-size: 14px;
-      font-weight: 600;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: #553c5e;
-      }
-
-      &:disabled {
-        background-color: #d3c9df;
-        cursor: not-allowed;
-      }
-    }
-  }
 }
+
+h2 {
+  font-family: 'Alegreya Sans';
+  font-weight: bold;
+  font-size: 18pt;
+  color: #6b5678;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.floating-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-label input {
+  font-family: "Alegreya Sans";  
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #6B5678;
+  border-radius: 4px;
+  outline: none;
+  background-color: #CFBCDB;
+}
+
+
+.floating-label input:focus {
+  border: 2px solid #6B5678;
+}
+
+.floating-label input:-webkit-autofill,
+.floating-label input:-webkit-autofill:hover,
+.floating-label input:-webkit-autofill:focus,
+.floating-label input:-webkit-autofill:active {
+  background-color: #CFBCDB !important;
+  -webkit-box-shadow: 0 0 0 30px #CFBCDB inset !important;
+  color: #6B5678 !important;
+}
+
+.floating-label input:-webkit-autofill::first-line {
+  color: #6B5678 !important;
+}
+
+.floating-label label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #CFBCDB;
+  padding: 0 5px;
+  transition: all 0.3s ease;
+  color: #6B5678;
+}
+
+/* Quand l'input est en focus OU contient du texte */
+.floating-label.filled label,
+.floating-label input:focus + label {
+  top: 0;
+  font-size: 12px;
+  color: #6B5678;
+  background-color: #CFBCDB;
+}
+
+.floating-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-select label {
+  position: absolute;
+  top: -8px; /* Garde le label en haut */
+  left: 10px;
+  font-size: 12px;
+  color: #6B5678;
+  background: #CFBCDB;
+  padding: 0 5px;
+}
+
+.floating-select select {
+  font-family: "Alegreya Sans";
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #6B5678;
+  border-radius: 4px;
+  background-color: #CFBCDB;
+  color: #6B5678;
+  text-align: center; /* Centre le texte */
+  appearance: none; /* Enlève le style par défaut du navigateur */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+}
+
+.floating-select select:focus {
+  border: 2px solid #6B5678;
+}
+
+/* Ajout d'un petit style pour la flèche du select */
+.floating-select::after {
+  content: "⌄";
+  position: absolute;
+  right: 20px;
+  top: 38%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #6B5678;
+  transition: transform 0.3s ease, top 0.3s ease;
+}
+
+
+.floating-select:has(select:focus)::after {
+  top: 60%;
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.file-upload {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style du label */
+.file-upload label {
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #6B5678;
+  background: #CFBCDB;
+  padding: 0 5px;
+}
+
+/* Zone de drop stylisée */
+.drop-zone {
+  font-family: "Alegreya Sans";
+  padding: 20px;
+  font-size: 16px;
+  border: 2px dashed #6B5678;
+  border-radius: 4px;
+  background-color: #CFBCDB;
+  color: #6B5678;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Effet visuel lors du survol */
+.drop-zone:hover,
+.drop-zone.dragover {
+  background-color: #bba4c7;
+  border-color: #563d5f;
+}
+
+
+::ng-deep .mat-mdc-dialog-surface {
+  background-color: transparent !important ;
+}
+
+
+
+
+
+//   form {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 16px;
+
+//     .form-group {
+//       display: flex;
+//       flex-direction: column;
+
+//       label {
+//         font-size: 14px;
+//         font-weight: 600;
+//         margin-bottom: 4px;
+//         color: #6b5678;
+//       }
+
+//       input,
+//       select {
+//         font-size: 14px;
+//         padding: 8px;
+//         border: 1px solid #d3c9df;
+//         border-radius: 4px;
+//         background-color: #ffffff;
+//         transition: border-color 0.3s ease;
+
+//         &:focus {
+//           border-color: #6b5678;
+//           outline: none;
+//         }
+//       }
+
+//       input[type="file"] {
+//         padding: 0;
+//       }
+//     }
+
+//     button {
+//       align-self: center;
+//       background-color: #6b5678;
+//       color: #ffffff;
+//       padding: 10px 20px;
+//       font-size: 14px;
+//       font-weight: 600;
+//       border: none;
+//       border-radius: 20px;
+//       cursor: pointer;
+//       transition: background-color 0.3s ease;
+
+//       &:hover {
+//         background-color: #553c5e;
+//       }
+
+//       &:disabled {
+//         background-color: #d3c9df;
+//         cursor: not-allowed;
+//       }
+//     }
+//   }
+

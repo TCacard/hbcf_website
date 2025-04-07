@@ -29,4 +29,24 @@ export class TeamsService {
       })
     );
   }
+
+  postTeam(teamData: any, file: File) {
+    let formData = new FormData();
+    formData.append('name', teamData.name);
+    formData.append('civility', teamData.civility);
+    formData.append('type', teamData.type);
+    
+    if (file) {
+      formData.append('picture', file, file.name);
+    } else {
+      console.warn("⚠️ Aucun fichier sélectionné !");
+    }
+
+    formData.forEach((value, key) => {
+      console.log(`${key}:`, value);
+    });
+
+    debugger
+    return this.http.post(this.navUrl, formData);
+  }
 }

@@ -96,6 +96,11 @@ mat-icon {
 }
 
 
+::ng-deep .mat-mdc-button, .mat-mdc-button .mdc-button__ripple {
+ border-radius: 8px !important; 
+}
+
+
 
 
 /* ============================================
