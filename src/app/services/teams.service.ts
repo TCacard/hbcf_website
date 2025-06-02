@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class TeamsService {
-  private navUrl = 'http://localhost:5000/teams';
+  private navUrl = 'https://api.cacard.fr/teams';
   private tempUrl = 'assets/data.json';
 
   constructor(private http: HttpClient) {}

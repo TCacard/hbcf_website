@@ -46,7 +46,7 @@ export class AccueilComponent implements OnInit{
   }
 
   getNewPicture(newItems: NewItem[]){
-    this.newPictures = newItems.flatMap(item => item.pictures).filter(picture => picture.front === true);
+    this.newPictures = newItems.flatMap(item => item.content).filter(picture => picture.type === "image" && picture.isCover === true);
   }
 
   getLogo(pictures: Picture[]) {

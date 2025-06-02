@@ -8,7 +8,7 @@ import { InscriptionPage } from '../models/inscriptionPage';
 })
 export class InscriptionPageService {
   
-  private inscriptionUrl = "http://localhost:5000/inscriptionPage"
+  private inscriptionUrl = "https://api.cacard.fr/inscriptionPage"
 
   constructor(private http: HttpClient) { }
 

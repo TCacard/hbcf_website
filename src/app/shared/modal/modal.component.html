@@ -1,10 +1,11 @@
 <div>
-  <h2>Ajouter une équipe</h2>
+  <h2>{{ data.title }}</h2>
   <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
     <!-- Boucle pour les champs -->
     <div *ngFor="let field of data.fields">
-      <!-- Champs texte -->
-      <div *ngIf="field.type === 'text'" class="floating-label" [class.filled]="isFieldFilled(field.name)">
+
+      <!-- Champs texte, date -->
+      <div *ngIf="field.type === 'text' || field.type === 'date'" class="floating-label" [class.filled]="isFieldFilled(field.name)">
         <input
           [id]="field.name"
           [type]="field.type"
@@ -23,40 +24,37 @@
           <option *ngFor="let option of field.options" [value]="option">{{ option }}</option>
         </select>
       </div>
-      
 
       <!-- Champ fichier -->
-      <div *ngIf="field.type === 'file'" 
-      class="file-upload" 
-      (dragover)="onDragOver($event)" 
-      (dragleave)="onDragLeave($event)" 
-      (drop)="onDrop($event)">
-   
-   <label [for]="field.name">{{ field.label }}</label>
-   
-   <!-- Zone de drop personnalisée -->
-   <div class="drop-zone" (click)="fileInput.click()">
-     <p *ngIf="!selectedFile">Glissez-déposez un fichier ici ou cliquez pour sélectionner</p>
-     <p *ngIf="selectedFile">{{ selectedFile.name }}</p>
-   </div>
- 
-   <!-- Input file caché -->
-   <input 
-     #fileInput
-     [id]="field.name"
-     type="file"
-     (change)="onFileSelected($event)"
-     accept="image/*"
-     hidden
-   />
- </div>
- 
+      <div *ngIf="field.type === 'file'" class="file-upload" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)">
+        <label [for]="field.name">{{ field.label }}</label>
+        <div class="drop-zone" (click)="fileInput.click()">
+          <p *ngIf="!selectedFile">Glissez-déposez un fichier ici ou cliquez pour sélectionner</p>
+          <p *ngIf="selectedFile">{{ selectedFile.name }}</p>
+        </div>
+        <input
+          #fileInput
+          [id]="field.name"
+          type="file"
+          (change)="onFileSelected($event)"
+          accept="image/*"
+          hidden
+        />
+      </div>
+
+      <!-- Checkbox -->
+      <div *ngIf="field.type === 'checkbox'" class="checkbox-field">
+        <label>
+          <input type="checkbox" [formControlName]="field.name" /> {{ field.label }}
+        </label>
+      </div>
+
     </div>
 
-    <!-- Bouton Envoyer -->
+    <!-- Boutons -->
     <div>
       <button type="submit" [disabled]="!formGroup.valid">Soumettre</button>
-      <button (click)="closeModal()">Annuler</button>
+      <button type="button" (click)="closeModal()">Annuler</button>
     </div>
   </form>
 </div>

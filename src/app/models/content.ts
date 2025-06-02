@@ -11,6 +11,8 @@ export interface Content {
 export interface ContentItem {
     _id: string;
     text: string;
+    type?: string;
+    isCover?: boolean;
     list_element?: ContentItem[];
     document?: string;
     link?: string;

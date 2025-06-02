@@ -16,5 +16,6 @@ export interface NewItem {
     publishDate: string;
     likes: number;
     importance: number;
+    isDraft: boolean;
     pictures: Picture[];
 }

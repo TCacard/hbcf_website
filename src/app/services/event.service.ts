@@ -9,7 +9,7 @@ import { ClubEvent } from '../models/event';
   providedIn: 'root',
 })
 export class EventDataService {
-  private navUrl = 'http://localhost:5000/events';
+  private navUrl = 'https://api.cacard.fr/events';
   private tempUrl = 'assets/data.json';
 
   constructor(private http: HttpClient) {}

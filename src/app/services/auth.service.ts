@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  private apiUrl = 'http://localhost:5000';
+  private apiUrl = 'https://api.cacard.fr';
 
 
   constructor(private http: HttpClient, private router: Router) { }
@@ -76,8 +76,8 @@ export class AuthService {
 
   // Vérifie si l'utilisateur est connecté
   isLoggedIn(): boolean {
-    const token = localStorage.getItem('token');
-    return !!token; // Retourne true si le token existe
+    if (typeof window === 'undefined') return false;
+    return !!localStorage.getItem('token');
   }
 
   getUserRole() {

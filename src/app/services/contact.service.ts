@@ -9,7 +9,7 @@ import { Contact } from '../models/contact';
 export class ContactService {
   // private navUrl = 'assets/data.json';
 
-  private apiUrl = 'http://127.0.0.1:5000/contact';
+  private apiUrl = 'https://api.cacard.fr/contact';
 
   constructor(private http: HttpClient) {}
 

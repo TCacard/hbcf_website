@@ -7,7 +7,7 @@ import { Gallery } from '../models/gallery';
   providedIn: 'root'
 })
 export class GalleryService {
-  private galleryUrl = 'http://localhost:5000/gallery';
+  private galleryUrl = 'https://api.cacard.fr/gallery';
 
   constructor(private http: HttpClient) {}
 

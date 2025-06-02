@@ -7,7 +7,7 @@ import { map } from 'rxjs';
   providedIn: 'root'
 })
 export class AccueilService {
-  private accueilUrl = "http://127.0.0.1:5000/accueil"
+  private accueilUrl = "https://api.cacard.fr/accueil"
   constructor(private http: HttpClient) {  }
 
   getAccueilData() {

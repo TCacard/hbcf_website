@@ -8,9 +8,9 @@ import { ClubHistory, ClubLocation, ClubNumbers } from '../models/club';
   providedIn: 'root',
 })
 export class ClubDataService {
-  private clubHistoryUrl = 'http://localhost:5000/club-history';
-  private clubNumbersUrl = 'http://localhost:5000/club-numbers';
-  private clubLocationUrl = 'http://localhost:5000/club-location';
+  private clubHistoryUrl = 'https://api.cacard.fr/club-history';
+  private clubNumbersUrl = 'https://api.cacard.fr/club-numbers';
+  private clubLocationUrl = 'https://api.cacard.fr/club-location';
 
   // private navUrl = 'assets/data.json';
 

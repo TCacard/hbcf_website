@@ -6,8 +6,8 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class UsersService {
-  private apiUrlRegister = 'http://localhost:5000/register'
-  private apiUrlLogin = 'http://localhost:5000/login'
+  private apiUrlRegister = 'https://api.cacard.fr/register'
+  private apiUrlLogin = 'https://api.cacard.fr/login'
 
   constructor(private http: HttpClient, private router: Router) { }
 

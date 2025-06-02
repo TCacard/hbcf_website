@@ -30,7 +30,6 @@ $color: #6B5678;
   .news-image {
     width: 33%;
     height: auto;
-    margin: 1rem auto;
     display: block;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -76,6 +75,22 @@ $color: #6B5678;
   .author {
     font-weight: bold;
   }
+
+  .create-article-button {
+    background-color: #6B5678;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  
+    &:hover {
+      background-color: #5a4567;
+    }
+  }
+  
 
   @media screen and (max-width: 768px) {
     .news-item {

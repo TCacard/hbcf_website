@@ -1,44 +1,108 @@
 <div *ngIf="news" class="news-details">
-  <h1>{{news.title}}</h1>
-  <div class="metadata">
-    <span class="date">{{news.publishDate | date}}</span>
-    <span class="author">{{news.author}}</span>
+  <h1>{{ news.title || 'Nouvel article' }}</h1>
+
+  <!-- Statut de l'article pour un admin -->
+  <div *ngIf="authService.getUserRole() === 'admin'" class="status-bar">
+    <span class="status" [ngClass]="{ 'draft': news.isDraft, 'published': !news.isDraft }">
+      {{ news.isDraft ? '📝 Brouillon' : '✅ Publié' }}
+    </span>
+    <button *ngIf="news.isDraft" (click)="publishNews()">Publier</button>
+    <button (click)="toggleEdit()">
+      {{ isEditing ? 'Fermer l’édition' : 'Modifier le contenu' }}
+    </button>
   </div>
+
+  <div class="metadata">
+    <span class="date">{{ news.publishDate | date }}</span>
+    <span class="author">{{ news.author }}</span>
+  </div>
+
+
   <div class="content">
-    <img *ngIf="news.pictures" [src]="news.pictures[0].link" [alt]="news.title">
-    <div *ngFor="let paragraph of news.content">
-        <h3 *ngIf="paragraph.title">{{paragraph.title}}</h3>
-        <ul *ngIf="paragraph.list_element">
-            <li *ngFor="let element of paragraph.list_element">{{element.text}}</li>
-        </ul>
-        <div class="paragraph-content" *ngIf="paragraph.text && !paragraph.link && !paragraph.email">
-            <p>{{paragraph.text}}</p>
-            <button *ngIf="paragraph.document" (click)="downloadFile(paragraph.document)" class="download-button">Télécharger le document</button>
+    <!-- Chaque bloc de contenu -->
+    <div *ngFor="let block of news.content; let i = index" 
+         class="content-block-wrapper" 
+         draggable="true"
+         (dragstart)="onDragStart(i)" 
+         (drop)="onDrop($event, i)" 
+         (dragover)="onDragOver($event)">
+
+          <!-- Drag handle à gauche -->
+      <div class="drag-handle" *ngIf="isEditing"
+          draggable="true"
+          (dragstart)="onDragStart(i)">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+      </div>
+
+      <!-- Bloc éditable : seul ce bloc recevra l'effet hover -->
+      <div class="content-block">
+
+        <!-- Texte -->
+        <div *ngIf="block.type === 'text'">
+          <p *ngIf="!isEditing" [innerHTML]="block.text"></p>
+          <ckeditor
+            class="editor-block"
+            *ngIf="isEditing && Editor"
+            [editor]="Editor"
+            [(ngModel)]="block.text"
+            [config]="editorConfig">
+          </ckeditor>
         </div>
-        <div *ngIf="paragraph.text && paragraph.email">
-            <p>{{paragraph.text}}</p>
-            <a *ngIf="paragraph.email" href="mailto:{{paragraph.email}}" class="mail-link">{{paragraph.email}}</a>
+
+        <!-- Citation -->
+        <blockquote *ngIf="block.type === 'quote'">
+          <em *ngIf="!isEditing">{{ block.value }}</em>
+          <ckeditor
+            class="editor-block"
+            *ngIf="isEditing && Editor"
+            [editor]="Editor"
+            [(ngModel)]="block.text"
+            [config]="editorConfig">
+          </ckeditor>        
+        </blockquote>
+
+        <div *ngIf="block.type === 'image'" class="image-wrapper">
+          <img [src]="block.url" [alt]="block.alt" class="image-block">
+        
+          <!-- Filtre + bouton import si édition -->
+          <div *ngIf="isEditing" class="image-overlay">
+            <button class="import-btn" (click)="triggerFileInput(i)">Importer une image</button>
+            <input type="file" accept="image/*" hidden #fileInput (change)="handleImageUpload($event, i)">
+          </div>
         </div>
-        <a *ngIf="paragraph.link" [href]="paragraph.link" target="_blank">{{paragraph.text}}</a>
+        
+
+        <!-- Vidéo -->
+        <div *ngIf="block.type === 'video'">
+          <iframe [src]="block.url" frameborder="0" allowfullscreen></iframe>
+          <div *ngIf="isEditing">
+            <input type="text" [(ngModel)]="block.url" placeholder="URL de la vidéo">
+            <input type="text" [(ngModel)]="block.alt" placeholder="Texte alternatif">
+          </div>
+        </div>
+      </div>
+
+      <!-- Bouton de suppression, en dehors de la zone hover -->
+      <button *ngIf="isEditing" class="delete-block-icon" (click)="removeBlock(i)" title="Supprimer">
+        🗑️
+      </button>
     </div>
-    <div class="share-menu">
-        <button class="share-button" (click)="toggleShareMenu()">
-            <i class="fas fa-share-alt"></i>
-        </button>
-        <div class="share-options" [class.active]="isShareMenuOpen">
-            <a (click)="shareOnWhatsapp()" class="whatsapp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a (click)="shareOnFacebook()" class="facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a (click)="shareOnInstagram()" class="instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
+
+    <!-- Boutons d'édition globaux -->
+    <button *ngIf="!isEditing" (click)="toggleEdit()">Éditer le document</button>
+    <button *ngIf="isEditing" (click)="saveChanges()">Sauvegarder</button>
+    <button *ngIf="isEditing" (click)="cancelChanges()">Annuler</button>
+
+    <!-- Menu d'ajout de blocs pour l'admin -->
+    <div *ngIf="authService.getUserRole() === 'admin' && isEditing" class="add-block-menu">
+      <button class="btn-add-block" (click)="addBlock('text')">+ Texte</button>
+      <button class="btn-add-block" (click)="addBlock('image')">+ Image</button>
+      <button class="btn-add-block" (click)="addBlock('quote')">+ Citation</button>
     </div>
-    <!-- <div class="likes" (click)="updateLikes(news.id)">
-        <span>Nombre de likes : {{news.likes}}</span>
-    </div> -->
   </div>
 </div>

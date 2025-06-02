@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
   providedIn: 'root',
 })
 export class NavDataService {
-  private navUrl = 'http://localhost:5000/nav';
+  private navUrl = 'https://api.cacard.fr/nav';
 
   private siteTitle = 'Handball Club de la Fillière'; 
 

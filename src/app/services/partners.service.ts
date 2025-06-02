@@ -7,8 +7,8 @@ import { Partner } from '../models/partner';
   providedIn: 'root'
 })
 export class PartnersService {
-  private actualPartnersUrl = 'http://localhost:5000/actual-partners';
-  private becomePartnerUrl = 'http://localhost:5000/become-partners';
+  private actualPartnersUrl = 'https://api.cacard.fr/actual-partners';
+  private becomePartnerUrl = 'https://api.cacard.fr/become-partners';
   private tempUrl = 'assets/data.json';
 
   constructor(private http: HttpClient) {}
